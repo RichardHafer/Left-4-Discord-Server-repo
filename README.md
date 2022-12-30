@@ -7,11 +7,11 @@ I created this repo to share and help people who want to set up servers similar 
 Keep in mind that our server runs the newest Left 4 Dead 2 version and SourceMod 1.11!
 If used on other versions, beware that it might be unstable or not work at all!
 
-**Requirements**
+# **Requirements**
 - Left 4 Dead 2 Dedicated Server
 - Sourcemod 1.11 (????)
 - Metamod 
 - OPTIONAL Stripper:Source , required for 4+ survivor players on "The Passing" Campaign
 
-**Contents**
+# **Contents**
 A few Addons, Plugins, Extensions, Gamedata, Configs, more...
