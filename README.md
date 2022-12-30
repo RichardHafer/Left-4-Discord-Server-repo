@@ -9,7 +9,7 @@ If used on other versions, beware that it might be unstable or not work at all!
 
 # **Requirements**
 - Left 4 Dead 2 Dedicated Server
-- Sourcemod 1.11 (????)
+- Sourcemod
 - Metamod 
 - OPTIONAL Stripper:Source , required for 4+ survivor players on "The Passing" Campaign
 
