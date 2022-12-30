@@ -1,16 +1,18 @@
 # Left-4-Discord-Server-repo
-Source- and Metamod plugins used on our Left 4 Dead 2 Dedicated server. Public repository
+Source- and Metamod plugins used on our Left 4 Dead 2 Dedicated server. Public repository.
+I created this repo to share and help people who want to set up servers similar to ours, usually 8 player coop or 8+ player versus servers, however, don't expect this repo to always be up-to-date...
 
-**LINUX SERVERS ONLY**
+**LINUX SERVERS ONLY!**
 
-**DISCLAIMER: Keep in mind that our server runs the newest Left 4 Dead 2 version and SourceMod 1.11!
-If used for other versions, beware that it might be unstable or not work at all!**
+**DISCLAIMER DON'T IGNORE THIS!** 
+Keep in mind that our server runs the newest Left 4 Dead 2 version and SourceMod 1.11!
+If used on other versions, beware that it might be unstable or not work at all!
 
-Requirements:
+**Requirements**
+- Left 4 Dead 2 Dedicated Server
+- Sourcemod 1.11 (????)
+- Metamod 
+- OPTIONAL Stripper:Source , required for 4+ survivor players on "The Passing" Campaign
 
-Clean Servers:
-Sourcemod (1.11), Metamod (Optional is Stripper:Source but required for 8+ player server)
-Extensions, Gamedata, Main Competitive Plugins, etc
-These simple Steps also setup your Server's base for other configs, so you'll only need the optional plugins that other configs require.
-Competitive Servers:
-None, modify your matchmodes file to add the config to the Match menu and you're set. :)
+**Contents**
+A few Addons, Plugins, Extensions, Gamedata, Configs, more...
