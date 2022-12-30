@@ -4,7 +4,7 @@ I created this repo to share and help people who want to set up servers similar 
 
 **LINUX SERVERS ONLY!**
 
-**DISCLAIMER DON'T IGNORE THIS!** 
+# **DISCLAIMER DON'T IGNORE THIS!** 
 Keep in mind that our server runs the newest Left 4 Dead 2 version and SourceMod 1.11!
 If used on other versions, beware that it might be unstable or not work at all!
 
