@@ -3,7 +3,8 @@ Source- and Metamod plugins used on our Left 4 Dead 2 Dedicated server. Public r
 I created this repo to share and help people who want to set up servers similar to ours, usually 8 player coop or 8+ player versus servers, however, don't expect this repo to always be up-to-date...
 
 # **DISCLAIMER DON'T IGNORE THIS!** 
-**LINUX SERVERS ONLY!**
+**- Many Plugins have been edited to have [Left 4 Discord] prefix in chat**
+**- LINUX SERVERS ONLY!**
 Keep in mind that our server runs the newest Left 4 Dead 2 version and SourceMod 1.11!
 If used on other game versions or operating-systems, beware that it might be unstable or not work at all!
 
