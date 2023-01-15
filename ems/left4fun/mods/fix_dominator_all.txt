@@ -1,0 +1,2 @@
+//Taking care of limits, especially tanks, because so many chargers + tank would be OP
+l4f_director.cm_DominatorLimit 10

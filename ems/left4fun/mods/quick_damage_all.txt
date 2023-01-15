@@ -1,0 +1,8 @@
+tongue_choke_damage_interval 0.2
+tongue_choke_damage_amount 2
+tongue_drag_damage_amount 5
+z_hunter_max_pounce_bonus_damage 50
+z_jockey_ride_damage 1
+z_jockey_ride_damage_interval 0.25
+z_pounce_damage 2
+z_pounce_damage_interval 0.2

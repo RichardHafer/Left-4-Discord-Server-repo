@@ -1,0 +1,167 @@
+// >>> This file contains some editable default settings
+// >>> The characters // and /// indicate comments starting after them, which are ignored
+// >>> This file gets compiled directly within the project_smok, so be careful with the formatting and what is written here!
+// >>> Errors and fixes done by the add-on will be reported to console, so check the console if you've made a change and wheter it caused a fix to be used
+//
+// >>> Values with comment DON'T CHANGE THIS are expected to stay same, they are critical and will generally be changing during the game!
+// >>> No key-value pair should be removed if there isn't a comment about saying otherwise!
+// >>> Format follows "key = value" pairings. Example pair: RestoreModelsOnJoin = true
+// !!!!!!!
+// >>> FILE SIZE SHOULD NOT EXCEED 16.5 KB, OR FILE WILL NOT BE READ
+// !!!!!!!
+// >>>Formatting should follow these rules:
+//	1. Key names should not be changed!
+//	2. Every {, [ and " character should have corresponding closing character: }, ] and " 
+//	3. Anything written after "//" characters are ignored
+//	4. Values are case-sensitive: (True and true are not the same!)
+//
+{
+	/// Tables of other custom settings
+	Tables =
+	{
+		/// Prop spawning basic settings
+		PropSpawn =
+		{
+			Type = "all"	// DON'T CHANGE THIS, this value updates while using the menus
+			SurvivorSettings = // Default extra spawn settings for props for all survivors
+			{
+				dynamic = // Dynamic class props, objects which cant move but be animated
+				{
+					spawn_height = // Spawn height
+					{
+						val = 0	// Height to use with flags: HEIGHT_USE_VAL and HEIGHT_ADD_VAL
+						min = 500	// Minimum value for random numbers range to use with flags: HEIGHT_RANDOM_GIVEN and HEIGHT_ADD_RANDOM_GIVEN
+						max = 800	// Maximum value for random numbers range to use with flags: HEIGHT_RANDOM_GIVEN and HEIGHT_ADD_RANDOM_GIVEN
+						// Flags to use with the values in this table, can be combined with "|" character.
+						// Flags and explanations:
+						// 	HEIGHT_NO_ADDITION		No changes, ignore all flags, origin at aimed point
+						// 	HEIGHT_EYELEVEL		Origin raised to eye height
+						// 	HEIGHT_USE_VAL		Use whatever height is given in "val"
+						// 	HEIGHT_ADD_VAL		Add whatever height is given in "val"
+						// 	HEIGHT_RANDOM_0_10		Use random height ranged [0,10]
+						// 	HEIGHT_RANDOM_0_50		Use random height ranged [0,50]
+						// 	HEIGHT_RANDOM_0_100		Use random height ranged [0,100]
+						// 	HEIGHT_RANDOM_0_500		Use random height ranged [0,500]
+						// 	HEIGHT_RANDOM_M10_0		Use random height ranged [-10,0]
+						// 	HEIGHT_RANDOM_M50_0		Use random height ranged [-50,0]
+						// 	HEIGHT_RANDOM_M100_0		Use random height ranged [-100,0]
+						// 	HEIGHT_RANDOM_M500_0		Use random height ranged [-500,0]
+						// 	HEIGHT_RANDOM_M10_10		Use random height ranged [-10,10]
+						// 	HEIGHT_RANDOM_M50_50		Use random height ranged [-50,50]
+						// 	HEIGHT_RANDOM_M100_100		Use random height ranged [-100,100]
+						// 	HEIGHT_RANDOM_M250_250		Use random height ranged [-250,250]
+						// 	HEIGHT_RANDOM_M500_500		Use random height ranged [-500,500]
+						// 	HEIGHT_RANDOM_GIVEN		Use random height ranged [min,max], "min" and "max" from this table
+						// 	HEIGHT_ADD_RANDOM_0_10		Add random height ranged [0,10]
+						// 	HEIGHT_ADD_RANDOM_0_50		Add random height ranged [0,50]
+						// 	HEIGHT_ADD_RANDOM_0_100		Add random height ranged [0,100]
+						// 	HEIGHT_ADD_RANDOM_0_500		Add random height ranged [0,500]
+						// 	HEIGHT_ADD_RANDOM_M10_0		Add random height ranged [-10,0]
+						// 	HEIGHT_ADD_RANDOM_M50_0		Add random height ranged [-50,0]
+						// 	HEIGHT_ADD_RANDOM_M100_0		Add random height ranged [-100,0]
+						// 	HEIGHT_ADD_RANDOM_M500_0		Add random height ranged [-500,0]
+						// 	HEIGHT_ADD_RANDOM_M10_10		Add random height ranged [-10,10]
+						// 	HEIGHT_ADD_RANDOM_M50_50		Add random height ranged [-50,50]
+						// 	HEIGHT_ADD_RANDOM_M100_100		Add random height ranged [-100,100]
+						// 	HEIGHT_ADD_RANDOM_M250_250		Add random height ranged [-250,250]
+						// 	HEIGHT_ADD_RANDOM_GIVEN		Add random height ranged [min,max], "min" and "max" from this table
+						//
+						// Example flag for spawning props above eyelevel "val" units:
+						// 		flags = HEIGHT_EYELEVEL|HEIGHT_ADD_VAL
+						flags = HEIGHT_ADD_VAL
+					}
+					spawn_angles = // Spawn angles
+					{
+						val = "0 0 0"	// Angles to use with flags: ANGLE_USE_VAL and ANGLE_ADD_VAL. Formatted as "Pitch Yaw Roll" in degrees
+						min = -45	// Minimum value for random numbers range to use with flags: ANGLE_RANDOM_GIVEN and ANGLE_ADD_RANDOM_GIVEN
+						max = 45	// Maximum value for random numbers range to use with flags: ANGLE_RANDOM_GIVEN and ANGLE_ADD_RANDOM_GIVEN
+						// Flags to use with the values in this table, can be combined with "|" character.
+						// Flags and explanations:
+						// 	ANGLE_NO_ADDITION		No changes, ignore all flags, QAngle(0,0,0) = "0 0 0"
+						// 	ANGLE_USE_VAL		Use whatever angle is given in "val"
+						// 	ANGLE_EYES_EXACT		Use exact eye angles of the player
+						// 	ANGLE_EYES_PITCH		Use pitch of player's eyes
+						// 	ANGLE_EYES_YAW		Use yaw of player's eyes, DEFAULT
+						// 	ANGLE_ADD_VAL		Add whatever angle is given in "val"
+						// 	ANGLE_PULL_UP		Add 90 degrees pitch
+						// 	ANGLE_PULL_AROUND		Add 180 degrees pitch
+						// 	ANGLE_PULL_DOWN		Add -90 degrees pitch
+						// 	ANGLE_TURN_RIGHT		Add 90 degrees yaw
+						// 	ANGLE_TURN_AROUND		Add 180 degrees yaw
+						// 	ANGLE_TURN_LEFT		Add -90 degrees yaw
+						// 	ANGLE_ROLLOVER_RIGHT		Add 90 degrees roll
+						// 	ANGLE_ROLLOVER		Add 180 degrees roll
+						// 	ANGLE_ROLLOVER_LEFT		Add -90 degrees roll
+						// 	ANGLE_RANDOM_0_90		Use random filled angle ranged [0,90]
+						// 	ANGLE_RANDOM_90_180		Use random filled angle ranged [90,180]
+						// 	ANGLE_RANDOM_0_180		Use random filled angle ranged [0,180]
+						// 	ANGLE_RANDOM_M90_0		Use random filled angle ranged [-90,0]
+						// 	ANGLE_RANDOM_M180_M90		Use random filled angle ranged [-180,-90]
+						// 	ANGLE_RANDOM_M180_0		Use random filled angle ranged [-180,0]
+						// 	ANGLE_RANDOM_M15_15		Use random filled angle ranged [-15,15]
+						// 	ANGLE_RANDOM_M30_30		Use random filled angle ranged [-30,30]
+						// 	ANGLE_RANDOM_M60_60		Use random filled angle ranged [-60,60]
+						// 	ANGLE_RANDOM_M90_90		Use random filled angle ranged [-90,90]
+						// 	ANGLE_RANDOM_GIVEN		Use random filled angle ranged [min,max], "min" and "max" from this table
+						// 	ANGLE_ADD_RANDOM_0_45		Add random filled angle ranged [0,45]
+						// 	ANGLE_ADD_RANDOM_45_90		Add random filled angle ranged [45,90]
+						// 	ANGLE_ADD_RANDOM_M45_0		Add random filled angle ranged [-45,0]
+						// 	ANGLE_ADD_RANDOM_M90_M45		Add random filled angle ranged [-90,-45]
+						// 	ANGLE_ADD_RANDOM_M15_15		Add random filled angle ranged [-15,15]
+						// 	ANGLE_ADD_RANDOM_M45_45		Add random filled angle ranged [-45,45]
+						// 	ANGLE_ADD_RANDOM_GIVEN		Add random filled angle ranged [min,max], "min" and "max" from this table
+						// 
+						// Example flag for spawning props facing left of the direction player is facing, rolled over:
+						// 		flags = ANGLE_EYES_EXACT|ANGLE_TURN_LEFT|ANGLE_ROLLOVER
+						// Example above doesn't use value given in "val", but same thing can be created different ways, for example
+						// 		val = "0 -90 180"
+						// 		flags = ANGLE_EYES_EXACT|ANGLE_ADD_VAL
+						// Some of the flags can overwrite each other(Ones that aren't additive), lowest in this list gets used.
+						// Example of ANGLE_USE_VAL flag using "val" angle but getting overwritten with ANGLE_EYES_EXACT flag to use player eye angles:
+						// 		flags = ANGLE_USE_VAL|ANGLE_EYES_EXACT
+						flags = ANGLE_EYES_YAW|ANGLE_ADD_VAL
+					}
+				}
+				physics = // Physics class props, objects with physics simulation enabled
+				{
+					spawn_height = // Spawn height
+					{
+						val = 1	// Height to use with given flags
+						min = 500	// Minimum value for random numbers range to use with flags: HEIGHT_RANDOM_GIVEN and HEIGHT_ADD_RANDOM_GIVEN
+						max = 800	// Maximum value for random numbers range to use with flags: HEIGHT_RANDOM_GIVEN and HEIGHT_ADD_RANDOM_GIVEN
+						// Flags to use with the values in this table, can be combined with "|" character. Check explanations above
+						flags = HEIGHT_ADD_VAL
+					}
+					spawn_angles = // Spawn angles
+					{
+						val = "0 0 0"	// Angles to use with given flags. Formatted as "Pitch Yaw Roll" in degrees
+						min = -45	// Minimum value for random numbers range to use with flags: ANGLE_RANDOM_GIVEN and ANGLE_ADD_RANDOM_GIVEN
+						max = 45	// Maximum value for random numbers range to use with flags: ANGLE_RANDOM_GIVEN and ANGLE_ADD_RANDOM_GIVEN
+						// Flags to use with the values in this table, can be combined with "|" character. Check explanations above
+						flags = ANGLE_EYES_YAW|ANGLE_ADD_VAL
+					}
+				}
+				ragdoll = // Ragdoll class props, all ragdoll objects
+				{
+					spawn_height = // Spawn height
+					{
+						val = 2	// Height to use with given flags
+						min = 500	// Minimum value for random numbers range to use with flags: HEIGHT_RANDOM_GIVEN and HEIGHT_ADD_RANDOM_GIVEN
+						max = 800	// Maximum value for random numbers range to use with flags: HEIGHT_RANDOM_GIVEN and HEIGHT_ADD_RANDOM_GIVEN
+						// Flags to use with the values in this table, can be combined with "|" character. Check explanations above
+						flags = HEIGHT_ADD_VAL
+					}
+					spawn_angles = // Spawn angles
+					{
+						val = "0 180 0"	// Angles to use with given flags. Formatted as "Pitch Yaw Roll" in degrees
+						min = -45	// Minimum value for random numbers range to use with flags: ANGLE_RANDOM_GIVEN and ANGLE_ADD_RANDOM_GIVEN
+						max = 45	// Maximum value for random numbers range to use with flags: ANGLE_RANDOM_GIVEN and ANGLE_ADD_RANDOM_GIVEN
+						// Flags to use with the values in this table, can be combined with "|" character. Check explanations above
+						flags = ANGLE_EYES_YAW|ANGLE_ADD_VAL
+					}
+				}
+			}
+
+		}
+	}
+} 

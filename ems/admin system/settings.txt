@@ -1,0 +1,6 @@
+AdminsOnly = true
+DisplayMsgs = false
+EnableIdleKick = false
+IdleKickTime = 300
+AdminPassword = "" 
+RetainCvars = false

@@ -1,0 +1,2 @@
+l4f_director.CommonLimit 30
+l4f_director.cm_CommonLimit 30

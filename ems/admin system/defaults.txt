@@ -1,0 +1,292 @@
+// >>> This file contains some editable default settings
+// >>> The characters // and /// indicate comments starting after them, which are ignored
+// >>> This file gets compiled directly within the project_smok, so be careful with the formatting and what is written here!
+// >>> Errors and fixes done by the add-on will be reported to console, so check the console if you've made a change and wheter it caused a fix to be used
+//
+// >>> Values with comment DON'T CHANGE THIS are expected to stay same, they are critical and will generally be changing during the game!
+// >>> No key-value pair should be removed if there isn't a comment about saying otherwise!
+// >>> Format follows "key = value" pairings. Example pair: RestoreModelsOnJoin = true
+// !!!!!!!
+// >>> FILE SIZE SHOULD NOT EXCEED 16.5 KB, OR FILE WILL NOT BE READ
+// !!!!!!!
+// >>>Formatting should follow these rules:
+//	1. Key names should not be changed!
+//	2. Every {, [ and " character should have corresponding closing character: }, ] and " 
+//	3. Anything written after "//" characters are ignored
+//	4. Values are case-sensitive: (True and true are not the same!)
+//
+{
+	/// Basic Settings
+	Basics =
+	{
+		LastLootThinkState = true	// true: Make bots start looking for grenades and packs at the round start, false: Use default bot abilities and stop them from looting and sharing
+		AllowAutomatedSharing = true	// true: Allow bots to share their packs and grenades for bots, false: Don't allow bots sharing the packs/grenades they pick up
+		AllowCustomResponses = true	// true: Custom responses allowed(round start talks, shoving response etc.), false: Disable custom responses
+		IgnoreDeletingPlayers = true	// true: Ignore "kill" or "becomeragdoll" inputs fired by a player on another player, false: (NOT RECOMMENDED) Allow kicking players with "kill" and "becomeragdoll" inputs
+		AllowCustomSharing = true	// true: Allow sharing of packs and grenades by holding R and rightclick, false: Don't allow sharing grenades and packs for players
+		CompileHexAndSpecialsInArguments = true	// true: Try to compile all arguments before using, false: Use arguments as is
+		// When this setting is true:
+		//	 o Offers a somewhat complex way of getting around chat and console limitations
+		//	 o Allows $[expression] format for arguments, example: $[2*3] will be replaced with 6
+		//	 o Allows usage of "__" enum class for special characters, example: $[__._q+__.h+__.i+__._em+__._q] will be replaced with "hi!"
+		//		 o Check !enum_string command for this!
+		//	 o Allows a few common hex characters:
+		//		 -> \x22 gets replaced with """
+		//		 -> \x29 gets replaced with ")"
+		//		 -> \x05 gets replaced with a constant which is for coloring olive green following text 
+		//		 -> \x03 gets replaced with a constant which is for coloring bright green following text 
+		//		 -> \x3B gets replaced with ";"
+		//		 -> \x04 gets replaced with a constant which is for coloring orange following text 
+		//		 -> \x3A gets replaced with ":"
+		//		 -> \x20 gets replaced with " "
+		//		 -> \x01 gets replaced with a constant which is for coloring white following text 
+		//		 -> \x7B gets replaced with "{"
+		//		 -> \x2C gets replaced with ","
+		//		 -> \x7D gets replaced with "}"
+		//		 -> \x27 gets replaced with "'"
+		//		 -> \x28 gets replaced with "("
+		//		Example: scripted_user_func say,all,console\x20hates\x20these\x20characters\x2C\x20so\x20use\x20\x22hex\x22\x20values!
+		//		Result: Makes everyone say "console hates these characters,so use "hex" values!" to chat
+		
+		IgnoreSpeakerClass = true	// true: Use any object as a "speaker" for a microphone, false: Force entity's class to be "info_target" to be used as a "speaker"
+		RestoreModelsOnJoin = true	// true: Allow keeping models unchanged between chapters/resets, false: Don't allow restoring original model between chapters/resets
+
+	}
+	/// Tables of other custom settings
+	Tables =
+	{
+		/// Output messages to chat
+		Outputs =
+		{
+			State = false	// true: print outputs to chat; false: print outputs to console
+		}
+		/// Settings to use when a vomit jar is thrown close to a survivor
+		VomitJarOnSurvivor =
+		{
+			State = false	// true: allow players getting hit by vomit jar; false: default vomit jar use
+			MaxDistance = 130	// Maximum distance from grenade to survivor in inches to allow getting hit by vomit
+
+		}
+		/// Random colors for vehicles in official maps(which were spawned with the map)
+		ColorfulVehicles =
+		{
+			State = true	// true: Randomize vehicle colors at start, false: Don't change any colors
+			ColorRanges = // Dark-Bright RGB range to pick random colors from
+			{
+				darkest = "88 88 88"	// Darkest RGB values seperated by a space
+				brightest = "255 255 255"	// Brightest RGB values seperated by a space
+			}
+
+		}
+		/// Grab-yeet basic settings
+		GrabYeet =
+		{
+			GrabRadiusTolerance = 30	// Radius around the aimed location to grab closest if not aiming at an object
+			BackUpProp = // Backup prop to use in case physics covnersion weren't successful
+			{
+				modelname = "models/items/l4d_gift.mdl"	// Backup prop model path
+				enabled = false	// true: Spawn backup prop upon failure, false: Keep the held object as is
+				classname = "prop_physics_multiplayer"	// Backup prop class name
+			}
+			SurvivorSettings = // Default settings for all survivors
+			{
+				grabByAimedPart = 1	// 1: grab object by aimed point, 0: grab object by it's origin (probably gonna get stuck)
+				entid = ""	// DON'T CHANGE THIS, gets updated with index of the object being held
+				grabDistMin = 75	// Minimum distance between player and held object while holding
+				grabRange = 170	// Maximum range for grabbing
+				grabAttachPos = "forward"	// DON'T CHANGE THIS, currently best working attachment point is "forward"
+				grabHeightBelowEyes = 30	// Used with grabByAimedPart 0, how much lower to hold the object below eyes
+				yeetPitch = -10	// Pitch of the yeeting relative to player, below zero to throw higher
+				yeetSpeed = 1500	// Yeeting speed
+			}
+			ValidGrabClasses = 
+			// Class names available for grab, format: "class_name = is_enabled"
+			// >>> To enable/disable classes, change value on the right side to true/false
+			// >>> To add new classes, add a new key-value pair following the format described above: my_class_name = true
+			// Classes written here by defaults can't be removed, they will get re-written if they are removed 
+			// Class names SHOULD NOT be repeated, when repeated, latest pair will overwrite the previous one(s) and dupes will be removed after any fix gets applied
+			// Weapons and their spawners are enabled by default (weapon_ suffix and _spawn prefix), you can disable any of them by adding them here:
+			// 		Example: Disable grabbing the ammo spawners
+			//			weapon_ammo_spawn = false
+			{
+				prop_dynamic_override = true
+				prop_physics = true
+				player = true
+				simple_physics_prop = true
+				prop_fuel_barrel = true
+				prop_door_rotating_checkpoint = true
+				prop_dynamic = true
+				commentary_dummy = true
+				prop_car_alarm = true
+				prop_door_rotating = true
+				prop_physics_multiplayer = true
+				prop_vehicle = true
+				prop_physics_override = true
+			}
+
+		}
+		/// Lootable prop parameters, used with create_loot_sources command
+		LootSources =
+		{
+			events_enabled = true	// true: Enable random events upon looting, false: no random events
+			SpawnDist = 10	// Spawning distance of the loots to looter player, loots spawn around the player
+			explosion_prob = 0.05	// Probability of explosion
+			LootDuration = 2.5	// How long it should take to loot a prop in seconds
+			GlowA = 255	// Alpha value of glowing color of lootable props
+			GlowB = 255	// Blue value of glowing color of lootable props
+			horde_prob = 0.07	// Probability of calling a horde
+			GlowRange = 180	// Range to start glowing for players 
+			MaxItems = 2	// Maximum amount of items to drop when the prop is looted
+			BarText = "Lootable Prop"	// Big text to display for the looting bar
+			NoItemProb = 0.35	// Probability of the prop having no loot, 0 = 0% , 1 = 100%
+			hurt_prob = 0.1	// Probability of getting hurt once or several times
+			MinItems = 1	// Minimum amount of items to drop when the prop is looted
+			GlowR = 255	// Red value of glowing color of lootable props
+			GlowG = 80	// Green value of glowing color of lootable props
+			BarSubText = "There might be something valuable in here!"	// Sub text to display for the looting bar
+			ambush_prob = 0.05	// Probability of a special zombie ambush
+
+		}
+		/// Hat wearing basic settings
+		// Attachment points:
+		//[
+		//      "eyes","mouth","forward","survivor_light","survivor_neck",
+		//      "primary","L_weapon_bone","muzzle_flash","armL_T2","armR_T2","medkit",
+		//      "bleedout","pistol","pills","spine","grenade","molotov",
+		//      "legL","legL_B","rfoot","lfoot","thighL","weapon_bone"
+		//]
+		Hats =
+		{
+			SurvivorSettings = // Default settings for all survivors
+			{
+				wearAbove = 5	// Extra height above the given attachment point
+				entid = ""	// DON'T CHANGE THIS
+				wearAttachPos = "eyes"	// Default attachment point, one of the above
+				collisiongroup = 0	// Collision group of the hat, check m_CollisionGroup netprops of the objects
+			}
+
+		}
+		/// Model saving
+		ModelSaving =
+		{
+			State = true	// true: save last randomly spawned prop's class and model, false: don't save last random model
+			SurvivorSettings = // Default saved model and classname for all survivors to spawn a prop
+			{
+				model = ""	// Model path, example: "models/props_interiors/tv.mdl"
+				classname = ""	// Class name of the prop to use the model, example: "prop_dynamic"
+			}
+
+		}
+		/// Line saving
+		LineSaving =
+		{
+			State = true	// true: save last spoken random line, false: don't save last random line
+			SurvivorSettings = // Default saved line speaker(target) and line's path(source) for all survivors
+			{
+				target = ""	// Speaker character name lowercase, example: bill
+				source = ""	// Voice line path or name, example: scenes/biker/hurrah01
+			}
+
+		}
+		/// Particles basic settings
+		Particles =
+		{
+			State = true	// true: save last spawned random particle, false: don't save last random particle
+			AttachAtAimedPointState = true	// true: attach particle at aimed location of the object, false: attach it to origin of aimed object
+			AttachDuration = -1	// Preferred attachment duration for attached particle, -1: infinite , any other positive real number works
+			SurvivorSettings = // Default saved particle settings for all survivors
+			{
+				duration = -1	// Preferred attachment duration for saved particle, -1: infinite, any other positive real number works
+				source = ""	// Particle name
+			}
+
+		}
+		/// Explosion basic settings for each survivor
+		Explosions =
+		{
+			SurvivorSettings = // Default explosion settings for all survivors
+			{
+				radiusmin = 300	// Minimum damage and push radius of explosion
+				maxpushspeed = 10000	// Maximum pushing speed of the explosion
+				minpushspeed = 2500	// Minimum pushing speed of the explosion
+				dmgmax = 30	// Maximum damage from explosion
+				delay = 1	// Explosion delay
+				radiusmax = 450	// Maximum damage and push radius of explosion
+				effect_name = "flame_blue"	// Particle to use until explosion, use "no_effect" for no particle effects
+				dmgmin = 10	// Minimum damage from explosion
+			}
+
+		}
+		/// Player models' keeping state for all players, value gets repeated for all characters
+		ModelPreferences =
+		{
+			State = true	// true: restore last player model for the next chapter/reset, false: restore original player model after the chapter/reset
+		}
+		/// Apocalypse-propageddon starting state
+		Apocalypse =
+		{
+			State = 0	// State of apocalypse when starting the game; 0: start off, 1: start on
+		}
+		/// Meteor shower starting state and default models
+		MeteorShower =
+		{
+			State = 0	// State of meteor shower when starting the game; 0: start off, 1: start on
+			Models = // Models used for meteor rocks and chunks, add or remove any models
+			{
+				// Default smaller meteor chunk models
+				_chunks = 
+				[
+					"models/props_debris/concrete_chunk02a.mdl",
+					"models/props_debris/concrete_chunk07a.mdl",
+					"models/props_interiors/concretepiller01_dm01_4.mdl",
+					"models/props_unique/zombiebreakwallinterior01_concrete_dm_part03.mdl",
+					"models/props_unique/zombiebreakwallinterior01_concrete_dm_part04.mdl",
+					"models/lostcoast/props_wasteland/rock_coast01e.mdl",
+					"models/lostcoast/props_wasteland/rock_cliff02a.mdl",
+					"models/lostcoast/props_wasteland/rock_cliff02b.mdl",
+					"models/lostcoast/props_wasteland/rock_cliff02c.mdl",
+					"models/lostcoast/props_wasteland/rock_cliff02d.mdl"
+				]
+				// Default meteor models to pick randomly from
+				_rocks = 
+				[
+					"models/props/cs_militia/militiarock02.mdl",
+					"models/props/cs_militia/militiarock03.mdl",
+					"models/props/cs_militia/militiarock05.mdl",
+					"models/props_wasteland/rock_moss01.mdl",
+					"models/props_wasteland/rock_moss02.mdl",
+					"models/props_wasteland/rock_moss03.mdl",
+					"models/props_wasteland/rock_moss04.mdl",
+					"models/props_wasteland/rock_moss05.mdl",
+					"models/props_wasteland/rockcliff07b.mdl"
+				]
+				// List of custom model paths to use with meteor shower setting "meteormodelpick" values 1 = RANDOM_CUSTOM , 2 = FIRST_CUSTOM and 3 = LAST_CUSTOM
+				_custom = []
+			}
+
+		}
+		/// Ghost zombies event starting state
+		GhostZombies =
+		{
+			State = 0	// State of ghost zombies when starting the game; 0: start off, 1: start on
+		}
+		/// Tank rocks default settings
+		TankRock =
+		{
+			rockspawnheight = 50	// Additional height to add to rock's spawn point, equal to height from ground
+			rockpushspeed = 900	// Speed of rock hit launching players
+			raise = 300	// Speed (direction normal to ground) to push players up to help launching
+			friction = 0.01	// Friction scale to help launch effect, causes sliding
+			mass_scale = 8	// Scale of mass to apply to random models
+			randomized = false	// true: random rock models, false: default rock model
+			spawn_prop_after = true	// true: Keep rock after hit(EXCEPT DEFAULT ROCK), false: Destroy rock after hit
+			pushenabled = true	// true: rock hits launch players, false: no launching
+			modelchangedelay = 2.3	// BE CAREFUL CHANGING THIS VALUE, time in seconds to wait after rock spawns to change it's model
+			modelpick = 0	// 0: Use randomized if enabled otherwise default rock model, 1: Use given model in modelspecific, 2: Pick random models from custommodels list
+			custommodels = []
+			rockorigin = ""	// DON'T CHANGE THIS, stores where rock was throw
+			modelspecific = "models/survivors/survivor_coach.mdl"	// Specific model name to use for rocks, used with modelpick = 1
+
+		}
+	}
+} 
