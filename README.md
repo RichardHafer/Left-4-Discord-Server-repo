@@ -4,6 +4,7 @@ I created this repo to share and help people who want to set up servers similar 
 
 # **DISCLAIMER DON'T IGNORE THIS!** 
 **- Many Plugins have been edited to have [Left 4 Discord] prefix in chat**
+
 **- LINUX SERVERS ONLY!**
 Keep in mind that our server runs the newest Left 4 Dead 2 version and SourceMod 1.11!
 If used on other game versions or operating-systems, beware that it might be unstable or not work at all!
