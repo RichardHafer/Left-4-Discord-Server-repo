@@ -12,6 +12,8 @@ or
 
 **- There are a lot of unused configs or text files in "cfg/sourcemod", "addons/sourcemod/data" and "addons/sourcemod/configs" because I tested and used a lot of different plugins in the past and I did not delete them so my settings can be saved, as I may activate a plugin again in the future**
 
+**- Fast Download and WebHook links removed, set up your own**
+
 **- Server currently set at maximum of 16 players, can be up to 32 however**
 
 **- Linux servers only?**
