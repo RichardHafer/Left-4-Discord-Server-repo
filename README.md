@@ -1,6 +1,6 @@
 # Left-4-Discord-Server-repo
 Source- and Metamod plugins used on our Left 4 Dead 2 Dedicated server. Public repository.
-I created this repo to share and help people who want to set up servers similar to ours, usually 8 player coop or 8+ player versus servers, however, don't expect this repo to always be up-to-date with newest plugin versions and files
+I created this repo to share and help people who want to set up servers similar to ours, usually 8 player coop or 8+ player versus servers, however, do not expect this repo to always be up-to-date with newest plugin versions and files
 
 # **DISCLAIMER DON'T IGNORE THIS!** 
 **- Many Plugins have been edited to have [Left 4 Discord] prefix in chat, however, I was not able to include most edited files in the "addons/sourcemod/scripting" folder, as they still are on my old Computer or I deleted them entirely**
