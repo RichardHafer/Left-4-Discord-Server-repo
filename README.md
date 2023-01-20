@@ -26,6 +26,10 @@ If used on other game versions or operating-systems, beware that it might be uns
 # **Contents**
 Lots of Addons, Plugins, Extensions, Gamedata, Configs, more...
 
+# **What is used for 8 players?**
+We use SuperVersus to allow 8 survivors and 8 infected players. For difficulty scaling, we use Balancer Spawn Infected.
+There are several other plugins with chat commands, such as "VoteMode" allowing players to vote a gamemode or mutation they want to play with !votemode without the server needing to be shut-down and fully restarted.
+
 Update: 20th January 2023
 - Announced on Discord
 
