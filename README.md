@@ -26,3 +26,5 @@ Lots of Addons, Plugins, Extensions, Gamedata, Configs, more...
 
 Update: 20th January 2023
 - Announced on Discord
+
+https://discord.gg/left4dead2
