@@ -1,0 +1,32 @@
+// Advertisements 2.1
+// by Tsunami
+//
+// Types
+// -----
+// center: Center message
+// chat: Chat message
+// hint: Hint message
+// menu: Menu message
+// top: Top message
+//
+// Flags (optional)
+// -----
+// Accepts flags of admins that will not see the advertisement.
+// When omitted everyone will see the advertisement.
+// When left empty only admins will see the advertisement.
+
+"Advertisements"
+{
+    "1"
+    {
+        "center"		"DISCORD: Discord.gg/left4dead2"
+    }
+    "2"
+    {
+        "chat"			"{green}[Left 4 Discord] {lightgreen}Some commands:\n!hat - Equip hats\n!chmap - Vote map change\n!votemode - Vote mode change\n!csm - Switch chars (gets saved!)"
+    }
+    "3"
+    {
+        "chat"			"{green}[Left 4 Discord] {lightgreen}Some commands:\n!hat - Equip hats\n!chmap - Vote map change\n!votemode - Vote mode change\n!csm - Switch chars (gets saved!)"
+    }
+}

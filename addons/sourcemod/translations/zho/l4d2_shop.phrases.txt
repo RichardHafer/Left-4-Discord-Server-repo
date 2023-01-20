@@ -1,0 +1,647 @@
+"Phrases"
+{
+
+	"SYSTEM"
+	{
+		"zho"		"{ORANGE}[{GREEN}商城{ORANGE}]{DEFAULT} "
+	}
+
+	"ADVERTISEMENT"
+	{
+		"zho"		"{DEFAULT}說 {CYAN}!buy {DEFAULT}開啟{CYAN}商城"
+	}
+
+
+	"NOT_ENOUGH_POINTS"
+	{
+		"#format"  "{1:d},{2:d}"
+		"zho"		"您沒有足夠的點數。 (需要:{ORANGE}{1}{DEFAULT}，您有:{ORANGE}{2}{DEFAULT})"
+	}
+
+	"FAILED_TO_BUY"
+	{
+		"#format"  "{1:s}"
+		"zho"		"購買{ORANGE}{1}{DEFAULT}失敗!"
+	}
+
+	"REWARD_POINTS"
+	{
+		"#format"  "{1:d}"
+		"zho" 		"{DEFAULT}獎勵: {GREEN}{1}{DEFAULT}點數。 "
+	}
+
+	"KILLED_INFECTED"
+	{
+		"#format"  "{1:d}"
+		"zho"		"擊殺了{ORANGE}{1}名{DEFAULT}感染者! "
+	}
+
+	"KILLED_SPECIAL_INFECTED"
+	{
+		"zho"		"擊殺了{ORANGE}特殊感染者{DEFAULT}! "
+	}
+
+	"REVIVED_TEAMMATE"
+	{
+		"zho"		"救起了倒地隊友。 "
+	}
+
+	"REVIVED_TEAMMATE_LEDGE"
+	{
+		"zho"		"救起了在懸崖邊緣的隊友。 "
+	}
+
+	"PROTECTED_TEAMMATE"
+	{
+		"zho"		"保護了隊友。 "
+	}
+
+	"HEALED_TEAMMATE"
+	{
+		"zho"		"包紮了隊友。 "
+	}
+
+	"BURNED_TANK"
+	{
+		"zho"		"燃燒了{ORANGE}Tank{DEFAULT}! "
+	}
+
+	"KILLED_WITCH"
+	{
+		"zho"		"擊殺了{ORANGE}Witch{DEFAULT}! "
+	}
+
+	"KILLED_WITCH_ONE_SHOT"
+	{
+		"zho"		"一槍擊殺了{ORANGE}Witch{DEFAULT}! "
+	}
+
+	"KILLED_TANK"
+	{
+		"zho"		"倖存者戰勝了{ORANGE}Tank{DEFAULT}! 全體"
+	}
+
+	"MENU_POINTS"
+	{
+		"#format"  "{1:d}"
+		"zho"		"您的點數: {1}"
+	}
+
+	"SHOP_INFECTED"
+	{
+		"zho"		"感染者商店"
+	}
+
+	"SHOP_SMGS"
+	{
+		"zho"		"衝鋒槍商店"
+	}
+
+	"SHOP_RIFLES"
+	{
+		"zho"		"步槍商店"
+	}
+
+	"SHOP_SNIPERS"
+	{
+		"zho"		"狙擊槍商店"
+	}
+
+	"SHOP_SHOTGUNS"
+	{
+		"zho"		"散彈槍商店"
+	}
+
+	"SHOP_OTHERS"
+	{
+		"zho"		"其他槍械商店"
+	}
+
+	"SHOP_SF_TRIAL"
+	{
+		"zho"		"體驗商城"
+	}
+
+	"SHOP_SF_PERMANENT"
+	{
+		"zho"		"永久商城"
+	}
+
+	"AUTO_BHOP"
+	{
+		"zho"		"自動連跳"
+	}
+
+	"GRAY_AMMO"
+	{
+		"zho"		"灰色彈道"
+	}
+
+	"GREEN_AMMO"
+	{
+		"zho"		"綠色彈道"
+	}
+
+	"BLUE_AMMO"
+	{
+		"zho"		"藍色彈道"
+	}
+
+	"GOLD_AMMO"
+	{
+		"zho"		"金色彈道"
+	}
+
+	"RED_AMMO"
+	{
+		"zho"		"紅色彈道"
+	}
+
+	"PERMANENT"
+	{
+		"zho"		"(永久)"
+	}
+
+	"ONE_ROUND"
+	{
+		"zho"		"(一回合)"
+	}
+
+	"REFUNDED"
+	{
+		"#format"  "{1:d}"
+		"zho"		"退還{GREEN}{1}{DEFAULT}點數。"
+	}
+
+	"IS_IN_YOUR_BAG"
+	{
+		"#format"  "{1:s}"
+		"zho"		"您已擁有{ORANGE}{1}{DEFAULT}。"
+	}
+
+	"MENU_BUY_CONFIRM"
+	{
+		"#format"  "{1:s},{2:d},{3:d},{4:d}"
+		"zho"		"產品: {1}\n費用: {2}\n您的點數: {3}\n購後結餘: {4}\n "
+	}
+
+	"SUCCEED_TO_BUY"
+	{
+		"#format"  "{1:s},{2:d},{3:d}"
+		"zho"		"購買{ORANGE}{1}{GREEN}成功! 消費了 {ORANGE}{2}{DEFAULT} 點數, 點數結餘: {GREEN}{3}{DEFAULT}。"
+	}
+
+	"SUCCEED_TO_LOAD"
+	{
+		"#format"  "{1:s},{2:d}"
+		"zho"	   "已讀取存檔! ID:{ORANGE}{1}%{DEFAULT}, 點數: {GREEN}{2}{DEFAULT}。"
+	}
+
+	"ENABLED"
+	{
+		"zho"	   "已啟用"
+	}
+
+	"DISABLED"
+	{
+		"zho"	   "已停用"
+	}
+
+	"ADMIN_ADD_POINT"
+	{
+		"#format"  "{1:d}"
+		"zho" 		"{ORANGE}Admin{DEFAULT}給您發了獎勵: {GREEN}{1}{DEFAULT}點數。 "
+	}
+
+	"ADMIN_CONFISCATE_POINT"
+	{
+		"#format"  "{1:d}"
+		"zho" 		"{ORANGE}Admin{DEFAULT}向您沒收了{ORANGE}{1}{DEFAULT}點數。 "
+	}
+	"ADMIN_SET_POINT"
+	{
+		"#format"  "{1:d}"
+		"zho" 		"{ORANGE}Admin{DEFAULT}把您的點數設置為{ORANGE}{1}{DEFAULT}點數。 "
+	}
+
+	"MENU_TITLE_ADD_LIST"
+	{
+		"#format"  "{1:d}"
+		"zho" 		"獎勵玩家:{1}點數"
+	}
+
+	"MENU_TITLE_CONFISCATE_LIST"
+	{
+		"#format"  "{1:d}"
+		"zho" 		"沒收玩家:{1}點數"
+	}
+
+	"MENU_TITLE_SET_LIST"
+	{
+		"#format"  "{1:d}"
+		"zho" 		"設置玩家:{1}點數"
+	}
+
+	"MENU_TITLE_POINTS_LIST"
+	{
+		"zho" 		"選擇點數:"
+	}
+
+	"MENU_ADD_POINTS"
+	{
+		"zho" 		"獎勵點數"
+	}
+
+	"MENU_REDUCE_POINTS"
+	{
+		"zho" 		"沒收點數"
+	}
+
+	"MENU_SET_POINTS"
+	{
+		"zho" 		"設置點數"
+	}
+
+	"MENU_ADMIN_OPTION"
+	{
+		"zho" 		"商城指令"
+	}
+
+	"INVOICE"
+	{
+		"zho"		"{ORANGE}收據{DEFAULT}"
+	}
+
+	"INVOICE_BUY_ITEM"
+	{
+		"zho"		"購買物品:"
+	}
+
+	"INVOICE_PRICE"
+	{
+		"#format"  "{1:d}"
+		"zho"		"售價:{ORANGE}{1}{DEFAULT}"
+	}
+	"INVOICE_BUYER_INFO"
+	{
+		"#format"  "{1:N},{2:d}"
+		"zho"		"顧客:{BLUE}{1}{DEFAULT}, 點數結餘:{GREEN}{2}{DEFAULT}"
+	}
+	"INVOICE_THANKS"
+	{
+		"zho"		"{GREEN}非常感謝您的光顧{DEFAULT}! {GREEN}祝您遊戲愉快{DEFAULT}!"
+	}
+	"INVOICE_END"
+	{
+		"zho"		"==============================="
+	}
+	"ammo"
+	{
+		"zho"		"補充彈藥"
+	}
+	"health"
+	{
+		"zho"		"滿血"
+	}
+	
+
+	"kill"
+	{
+		"zho"		"自殺"
+	}
+	"boomer"
+	{
+		"zho"		"Boomer"
+	}
+	"hunter"
+	{
+		"zho"		"Hunter"
+	}
+	"smoker"
+	{
+		"zho"		"Smoker"
+	}
+	"spitter"
+	{
+		"zho"		"Spitter"
+	}
+	"charger"
+	{
+		"zho"		"Charger"
+	}
+	"jockey"
+	{
+		"zho"		"Jockey"
+	}
+	"tank"
+	{
+		"zho"		"Tank"
+	}
+	"witch"
+	{
+		"zho"		"Witch"
+	}
+	"mob"
+	{
+		"zho"		"MOB"
+	}
+	"director_force_panic_event"
+	{
+		"zho"		"Panic Event"
+	}
+
+
+	"SHOP_GUNS"
+	{
+		"zho"		"槍械商城"
+	}
+
+	"SHOP_MELEES"
+	{
+		"zho"		"銳器商城"
+	}
+
+	"SHOP_THROWABLES"
+	{
+		"zho"		"投擲物商城"
+	}
+
+	"SHOP_AMMOS"
+	{
+		"zho"		"彈藥商城"
+	}
+
+	"SHOP_MEDICINES"
+	{
+		"zho"		"醫療商城"
+	}
+
+	"SHOP_SF"
+	{
+		"zho"		"特殊商城"
+	}
+
+	"SHOP_SF_BAG"
+	{
+		"zho"		"特殊背包"
+	}
+
+	"BUY_YES"
+	{
+		"zho"		"買了!"
+	}
+
+	"BUY_NO"
+	{
+		"zho"		"不了..."
+	}
+
+
+	"DEFIBRILLATE_TEAMMATE"
+	{
+		"zho"		"把隊友從地獄中拉回。 "
+	}
+
+	"RESCUED"
+	{
+		"zho"		"解救了隊友。 "
+	}
+
+	"CURRENT_POINTS"
+	{
+		"zho"		"點數結餘:"
+	}
+
+	"SHOP_MAIN"
+	{
+		"zho"		"歡迎光臨商城"
+	}
+
+	"ONLY_USED_BY"
+	{
+		"zho"		"只有{ORANGE}倖存者隊伍{DEFAULT}或{ORANGE}感染者隊伍{DEFAULT}才能使用。"
+	}
+
+	"ALL_AMMO_COLORS"
+	{
+		"zho"		"所有彈道"
+	}
+
+	"MENU_SUICIDE"
+	{
+		"zho"		"你、想死一遍看看嗎?"
+	}
+
+	"SUICIDE"
+	{
+		"zho"		"居然被豆腐撞頭給砸死了。"
+	}
+
+	"SUICIDE_YES"
+	{
+		"zho"		"要!"
+	}
+	"SUICIDE_NO"
+	{
+		"zho"		"我還不想死..."
+	}
+
+	"NOT_ALLOW_SUICIDE"
+	{
+		"zho"		"{ORANGE}自殺{DEFAULT}已停用。"
+	}
+
+	"NO_PRIMARY_WEAPON"
+	{
+		"zho"		"您沒有主武器... "
+	}
+	"YOU_ARE_DEAD"
+	{
+		"zho"		"您目前的狀況不太好..."
+	}
+	"NO_PERMANENT_ITEM"
+	{
+		"zho"		"在使用{ORANGE}特殊背包{DEFAULT}前，請先到{ORANGE}特殊商城{DEFAULT}最少購買一個{ORANGE}永久物品{DEFAULT}。"
+	}
+
+	"NOTIFY_ALL"
+	{
+		"#format"	"{1:N},{2:s},{3:d}"
+		"zho"		"{BLUE}{1}{DEFAULT}購買了{ORANGE}{2}{DEFAULT}(售價: {ORANGE}{3}{DEFAULT})。"
+	}
+
+	"SHOP_TRANSFER"
+	{
+		"zho"		"點數轉賬"
+	}
+
+	"FAILED_TO_TRANSFER"
+	{
+		"#format"	"{1:N},{2:d},{3:N},{4:d}"
+		"zho"		"失敗! 點數餘額不足以轉賬(轉賬: {ORANGE}{2}{DEFAULT}+{ORANGE}{3}{DEFAULT}, 餘額: {GREEN}{4}{DEFAULT})。"
+	}
+
+	"TRANSFERRED_ALL"
+	{
+		"#format"	"{1:N},{2:d},{3:N},{4:N}"
+		"zho"		"{BLUE}{1}{DEFAULT}已轉賬{GREEN}{2}{DEFAULT}點數至{BLUE}{3}{DEFAULT}。(手續費: {ORANGE}{4}{DEFAULT})"
+	}
+
+	"TRANSFERRED_TO"
+	{
+		"#format"	"{1:N},{2:d},{3:d}"
+		"zho"		"{BLUE}您{DEFAULT}已轉賬{GREEN}{2}{DEFAULT}點數至{BLUE}{1}{DEFAULT}。(已收取手續費: {ORANGE}{3}{DEFAULT})"
+	}
+
+	"TRANSFERRED"
+	{
+		"#format"	"{1:N},{2:d}"
+		"zho"		"{BLUE}{1}{DEFAULT}已轉賬{GREEN}{2}{DEFAULT}點數至{BLUE}您{DEFAULT}。"
+	}
+
+	"USER_MISMATCH"
+	{
+		"zho"		"用戶不正確，請再試一次。"
+	}
+
+	"YES"
+	{
+		"zho"		"好"
+	}
+
+	"NO"
+	{
+		"zho"		"不了"
+	}
+
+	"MENU_TITLE_TRANSFER_POINT"
+	{
+		"#format"	"{1:d}"
+		"zho"		"轉賬{1}點數至:"
+	}
+	
+	"HANDLING_FEE"
+	{
+		"zho"		"手續費:"
+	}
+
+	"AFTER_TRANSFERRED_BALANCE"
+	{
+		"zho"		"轉賬後結餘:"
+	}
+
+	"KILLED_SURVIVOR"
+	{
+		"zho"		"擊殺了{ORANGE}倖存者{DEFAULT}! "
+	}
+
+	"INCAPACITATE_SURVIVOR"
+	{
+		"zho"		"Incapacitate a survivor. "
+	}
+
+	"PULLED_SURVIVOR"
+	{
+		"zho"		"Pulled a survivor. "
+	}
+
+	"POUNCED_SURVIVOR"
+	{
+		"zho"		"Pounced a survivor. "
+	}
+
+	"TAGGED_SURVIVOR"
+	{
+		"zho"		"Tagged a survivor. "
+	}
+
+	"CHARGED_SURVIVOR"
+	{
+		"zho"		"Charged a survivor. "
+	}
+
+	"COLLATERAL_DAMAGE"
+	{
+		"zho"		"Collateral damage!!! "
+	}
+
+	"RODE_SURVIVOR"
+	{
+		"zho"		"Rode a survivor!!! "
+	}
+
+	"BATH_DAMAGE"
+	{
+		"zho"		"Bath Damage! "
+	}
+
+	"MULTIPLE_DAMAGE"
+	{
+		"zho"		"Multiple Damage! "
+	}
+
+	"INVALID_ITEM"
+	{
+		"#format"	"{1:s}"
+		"zho"		"無效的物品 {ORANGE}{1}{DEFAULT}"
+	}
+
+	"YOU_ARE_ALIVE"
+	{
+		"zho"		"只能死亡時購買。"
+	}
+
+	"HELP"
+	{
+		"zho"		"Item points can be earned by performing acts of teamwork. Type !buy to spend them, and !points to find out how many you have."
+	}
+
+	"UP_TO_LIMIT"
+	{
+		"#format"	"{1:s}"
+		"zho"		"失敗... {ORANGE}{1}{DEFAULT}的數量已達到上限。"
+	}
+
+	"SHOP_AIRSTRIKE"
+	{
+		"zho"		"空襲商城"
+	}
+
+	"SUPER_QING_GONG_ACTIVE"
+	{
+		"zho"		"超級輕功發動"
+	}
+
+	"QING_GONG_ACTIVE"
+	{
+		"zho"		"輕功發動"
+	}
+
+	"QING_GONG"
+	{
+		"zho"		"輕功秘笈"
+	}
+
+
+	"WHEN_SF_IS_ON"
+	{
+		"#format"   "{1:s},{2:s}"
+		"zho"		"當{ORANGE}{1}{DEFAULT}為{GREEN}啟用{DEFAULT}時，{ORANGE}{2}{DEFAULT}將自動{ORANGE}停用{DEFAULT}。"
+	}
+
+	"AUTO_BHOP_TUT"
+	{
+		"zho"		"按住{ORANGE}跳鍵{DEFAULT}來激活{ORANGE}自動連跳{DEFAULT}。"
+	}
+
+	"QING_GONG_TUT"
+	{
+		"zho"		"按下{ORANGE}蹲鍵 /+ 兩次跳鍵{DEFAULT}來激活 {ORANGE}輕功{DEFAULT}。"
+	}
+
+	"NO_GUN_TO_ACTIVE"
+	{
+		"#format"   "{1:s}"
+		"zho"		"您沒有任何槍械，待您撿起槍械時，{ORANGE}{1}{DEFAULT}將會激活。"
+	}
+}

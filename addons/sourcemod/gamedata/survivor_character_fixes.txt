@@ -1,0 +1,138 @@
+"Games"
+{
+	"#default"
+	{
+		"Functions"
+		{
+			"UTIL_PlayerByIndex"
+			{
+				"signature"				"UTIL_PlayerByIndex"
+				"callconv"				"cdecl"
+				"return"				"cbaseentity"
+				"arguments"
+				{
+					"a1"
+					{
+						"type"			"int"
+					}
+				}
+			}
+			"SurvivorResponseCachedInfo::Update"
+			{
+				"signature"				"SurvivorResponseCachedInfo::Update"
+				"callconv"				"thiscall"
+				"return"				"int"
+			}
+			"ForEachSurvivor<ClosestSurvivorDistanceScan>"
+			{
+				"windows"
+				{
+					"signature"			"ForEachSurvivor<ClosestSurvivorDistanceScan>"
+					"callconv"			"cdecl"
+					"return"			"bool"
+					"arguments"
+					{
+						"a1"
+						{
+							"type"		"int"
+						}
+					}
+				}
+			}
+		}
+		
+		"Signatures"
+		{
+			"UTIL_PlayerByIndex"
+			{
+				"library"	"server"
+				"linux"		"@_Z18UTIL_PlayerByIndexi"
+			}
+			"SurvivorResponseCachedInfo::Update"
+			{
+				"library"	"server"
+				"linux"		"@_ZN26SurvivorResponseCachedInfo6UpdateEv"
+			}
+		}
+	}
+	"left4dead"
+	{
+		"Signatures"
+		{
+			"UTIL_PlayerByIndex"
+			{
+				"library"	"server"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x7E\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x3B\x2A\x2A\x7F\x2A\x3D"
+				/* ? ? ? ? ? ? ? 85 ? 7E ? 8B ? ? ? ? ? 3B ? ? 7F ? 3D */
+			}
+			"ForEachSurvivor<ClosestSurvivorDistanceScan>"
+			{
+				"library"	"server"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x57\xBF\x2A\x2A\x2A\x2A\x39\x2A\x2A\x7C\x2A\x53\x8B\x2A\x2A\x2A\x56\x57\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2B\x2A\x2A\xC1\x2A\x2A\x74\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x83\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x75\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x89"
+				/* ? ? ? ? ? ? 57 BF ? ? ? ? 39 ? ? 7C ? 53 8B ? ? ? 56 57 E8 ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? ? 85 ? 74 ? 8B ? ? ? ? ? 2B ? ? C1 ? ? 74 ? 8B ? 8B ? ? ? ? ? 8B ? FF ? 84 ? 74 ? 83 ? ? ? ? ? ? 74 ? 8B ? E8 ? ? ? ? 83 ? ? 75 ? 8B ? ? ? ? ? 89 */
+			}
+		}
+	}
+	"left4dead2"
+	{
+		"Functions"
+		{
+			"ConvertToExternalCharacter"
+			{
+				"signature"				"ConvertToExternalCharacter"
+				"callconv"				"cdecl"
+				"return"				"int"
+				"arguments"
+				{
+					"a1"
+					{
+						"type"			"int"
+					}
+				}
+			}
+			"ForEachSurvivor<PopulateActiveAreaSet>"
+			{
+				"signature"				"ForEachSurvivor<PopulateActiveAreaSet>"
+				"callconv"				"cdecl"
+				"return"				"bool"
+				"arguments"
+				{
+					"a1"
+					{
+						"type"			"int"
+					}
+				}
+			}
+		}
+		
+		"Signatures"
+		{
+			"UTIL_PlayerByIndex"
+			{
+				"library"	"server"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x57\x33\x2A\x85\x2A\x7E\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x3B"
+				/* ? ? ? ? ? ? 57 33 ? 85 ? 7E ? 8B ? ? ? ? ? 3B */
+			}
+			"ConvertToExternalCharacter"
+			{
+				"library"	"server"
+				"linux"		"@_Z26ConvertToExternalCharacter21SurvivorCharacterType"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x8B\x2A\x2A\x75\x2A\x83\x2A\x2A\x77\x2A\xFF\x24\x2A\xA8"
+				/* ? ? ? ? ? ? ? ? 83 ? ? 8B ? ? 75 ? 83 ? ? 77 ? FF 24 ? A8 */
+			}
+			"ForEachSurvivor<PopulateActiveAreaSet>"
+			{
+				"library"	"server"
+				"linux"		"@_Z15ForEachSurvivorI21PopulateActiveAreaSetEbRT_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\xBF\x2A\x2A\x2A\x2A\x39\x2A\x2A\x7C\x2A\x8B\x2A\x2A\x57\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2B\x2A\x2A\xC1\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x83\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x75\x2A\x56\x8B\x2A\xE8\x35\xF7"
+				/* ? ? ? ? ? ? ? ? 53 56 57 BF ? ? ? ? 39 ? ? 7C ? 8B ? ? 57 E8 ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? ? 85 ? 74 ? 8B ? ? ? ? ? 2B ? ? C1 ? ? 85 ? 74 ? 8B ? 8B ? ? ? ? ? 8B ? FF ? 84 ? 74 ? 83 ? ? ? ? ? ? 74 ? 8B ? E8 ? ? ? ? 83 ? ? 75 ? 56 8B ? E8 35 F7 */
+			}
+			"ForEachSurvivor<ClosestSurvivorDistanceScan>"
+			{
+				"library"	"server"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x57\xBF\x2A\x2A\x2A\x2A\x39\x2A\x2A\x7C\x2A\x53\x8B\x2A\x2A\x56\x57\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2B\x2A\x2A\xC1\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x83\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x75\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x89"
+				/* ? ? ? ? ? ? ? ? 57 BF ? ? ? ? 39 ? ? 7C ? 53 8B ? ? 56 57 E8 ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? ? 85 ? 74 ? 8B ? ? ? ? ? 2B ? ? C1 ? ? 85 ? 74 ? 8B ? 8B ? ? ? ? ? 8B ? FF ? 84 ? 74 ? 83 ? ? ? ? ? ? 74 ? 8B ? E8 ? ? ? ? 83 ? ? 75 ? 8B ? ? ? ? ? 89 */
+			}
+		}
+	}
+}

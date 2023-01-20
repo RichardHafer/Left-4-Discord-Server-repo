@@ -1,0 +1,646 @@
+"Phrases"
+{
+
+	"SYSTEM"
+	{
+		"en"		"{ORANGE}[{GREEN}SHOP{ORANGE}]{DEFAULT} "
+	}
+
+	"ADVERTISEMENT"
+	{
+		"en"		"{DEFAULT}Type {CYAN}!buy{DEFAULT} to open {CYAN}Shop"
+	}
+
+
+	"NOT_ENOUGH_POINTS"
+	{
+		"#format"  "{1:d},{2:d}"
+		"en"		"You have not enough points. (Cost: {ORANGE}{1}{DEFAULT}, Yours: {ORANGE}{2}{DEFAULT})"
+	}
+
+	"FAILED_TO_BUY"
+	{
+		"#format"  "{1:s}"
+		"en"		"Failed to buy {ORANGE}{1}{DEFAULT}!"
+	}
+
+	"REWARD_POINTS"
+	{
+		"#format"  "{1:d}"
+		"en"		"{DEFAULT}Reward: {GREEN}{1}{DEFAULT} points. "
+	}
+
+	"KILLED_INFECTED"
+	{
+		"#format"  "{1:d}"
+		"en"		"Killed {ORANGE}{1}{DEFAULT} infected! "
+	}
+
+	"KILLED_SPECIAL_INFECTED"
+	{
+		"en"		"Killed {ORANGE}Special Infected{DEFAULT}! "
+	}
+
+	"REVIVED_TEAMMATE"
+	{
+		"en"		"Revived a teammate. "
+	}
+
+	"REVIVED_TEAMMATE_LEDGE"
+	{
+		"en"		"Revived a teammate on ledge. "
+	}
+
+	"PROTECTED_TEAMMATE"
+	{
+		"en"		"Protected a teammate. "
+	}
+
+	"HEALED_TEAMMATE"
+	{
+		"en"		"Healed a teammate. "
+	}
+
+	"BURNED_TANK"
+	{
+		"en"		"Burned {ORANGE}Tank{DEFAULT}! "
+	}
+
+	"KILLED_WITCH"
+	{
+		"en"		"Killed {ORANGE}Witch{DEFAULT}! "
+	}
+
+	"KILLED_WITCH_ONE_SHOT"
+	{
+		"en"		"Killed {ORANGE}Witch{DEFAULT} in one shot! "
+	}
+
+	"KILLED_TANK"
+	{
+		"en"		"Survivors defeated {ORANGE}Tank{DEFAULT}! "
+	}
+
+	"MENU_POINTS"
+	{
+		"#format"  "{1:d}"
+		"en"		"Points Balance: {1}"
+	}
+
+	"SHOP_INFECTED"
+	{
+		"en"		"Infected Shop"
+	}
+
+	"SHOP_SMGS"
+	{
+		"en"		"SMG Shop"
+	}
+
+	"SHOP_RIFLES"
+	{
+		"en"		"Rifle Shop"
+	}
+
+	"SHOP_SNIPERS"
+	{
+		"en"		"Sniper Shop"
+	}
+
+	"SHOP_SHOTGUNS"
+	{
+		"en"		"Shotgun Shop"
+	}
+
+	"SHOP_OTHERS"
+	{
+		"en"		"Other Guns Shop"
+	}
+
+	"SHOP_SF_TRIAL"
+	{
+		"en"		"Trial Shop"
+	}
+
+	"SHOP_SF_PERMANENT"
+	{
+		"en"		"Permanent Shop"
+	}
+
+	"AUTO_BHOP"
+	{
+		"en"		"Auto Jump (Bhop)"
+	}
+
+	"GRAY_AMMO"
+	{
+		"en"		"Gray Ammo"
+	}
+
+	"GREEN_AMMO"
+	{
+		"en"		"Green Ammo"
+	}
+
+	"BLUE_AMMO"
+	{
+		"en"		"Blue Ammo"
+	}
+
+	"GOLD_AMMO"
+	{
+		"en"		"Gold Ammo"
+	}
+
+	"RED_AMMO"
+	{
+		"en"		"Red Ammo"
+	}
+
+	"PERMANENT"
+	{
+		"en"		"(Permanent)"
+	}
+
+	"ONE_ROUND"
+	{
+		"en"		"(One Round)"
+	}
+
+	"REFUNDED"
+	{
+		"#format"  "{1:d}"
+		"en"		"Refound {GREEN}{1}{DEFAULT} points."
+	}
+
+	"IS_IN_YOUR_BAG"
+	{
+		"#format"  "{1:s}"
+		"en"		"You already have {ORANGE}{1}{DEFAULT}."
+	}
+
+	"MENU_BUY_CONFIRM"
+	{
+		"#format"  "{1:s},{2:d},{3:d},{4:d}"
+		"en"		"Product: {1}\nCost: {2}\n(Your Points: {3})\n"
+	}
+
+	"SUCCEED_TO_BUY"
+	{
+		"#format"  "{1:s},{2:d},{3:d}"
+		"en"		"Buy {ORANGE}{1}{GREEN} successfully! Cost {ORANGE}{2}{DEFAULT} points, balance: {GREEN}}{3}{DEFAULT}."
+	}
+
+	"SUCCEED_TO_LOAD"
+	{
+		"#format"  "{1:s},{2:d}"
+		"en"		"ID:{ORANGE}{1}%{DEFAULT}, Points: {GREEN}{2}{DEFAULT}."
+	}
+
+	"ENABLED"
+	{
+		"en"	   "Enabled"
+	}
+
+	"DISABLED"
+	{
+		"en"	   "Disabled"
+	}
+
+	"ADMIN_ADD_POINT"
+	{
+		"#format"  "{1:d}"
+		"en" 		"{ORANGE}Admin{DEFAULT} gave you: {GREEN}{1}{DEFAULT} points."
+	}
+
+	"ADMIN_CONFISCATE_POINT"
+	{
+		"#format"  "{1:d}"
+		"en" 		"Your {ORANGE}{1}{DEFAULT} points were confiscated by {ORANGE}Admin{DEFAULT}."
+	}
+	"ADMIN_SET_POINT"
+	{
+		"#format"  "{1:d}"
+		"en" 		"{ORANGE}Admin{DEFAULT} set your points to {ORANGE}{1}{DEFAULT}"
+	}
+
+	"MENU_TITLE_ADD_LIST"
+	{
+		"#format"  "{1:d}"
+		"en" 		"Reward: {1} Points"
+	}
+
+	"MENU_TITLE_CONFISCATE_LIST"
+	{
+		"#format"  "{1:d}"
+		"en" 		"Confiscate: {1} Points"
+	}
+
+	"MENU_TITLE_SET_LIST"
+	{
+		"#format"  "{1:d}"
+		"en" 		"Set: {1} Points"
+	}
+
+	"MENU_TITLE_POINTS_LIST"
+	{
+		"en" 		"Choose Points: "
+	}
+
+	"MENU_ADD_POINTS"
+	{
+		"en" 		"Reward Points"
+	}
+
+	"MENU_REDUCE_POINTS"
+	{
+		"en" 		"Confiscate Points"
+	}
+
+	"MENU_SET_POINTS"
+	{
+		"en" 		"Set Points"
+	}
+
+	"MENU_ADMIN_OPTION"
+	{
+		"en" 		"Shop Commands"
+	}
+
+	"INVOICE"
+	{
+		"en"		"{ORANGE}INVOICE{DEFAULT}"
+	}
+
+	"INVOICE_BUY_ITEM"
+	{
+		"en"		"Product: "
+	}
+
+	"INVOICE_PRICE"
+	{
+		"#format"  "{1:d}"
+		"en"		"Cost:{ORANGE}{1}{DEFAULT}"
+	}
+	"INVOICE_BUYER_INFO"
+	{
+		"#format"  "{1:N},{2:d}"
+		"en"		"Customer:{BLUE}{1}{DEFAULT}, Balance:{GREEN}{2}{DEFAULT}"
+	}
+	"INVOICE_THANKS"
+	{
+		"en"		"{GREEN}Thank you very much{DEFAULT}! {GREEN}Good luck{DEFAULT}!"
+	}
+	"INVOICE_END"
+	{
+		"en"		"================================="
+	}
+	"ammo"
+	{
+		"en"		"Refill Ammo"
+	}
+	"health"
+	{
+		"en"		"Full Health"
+	}
+
+
+	"kill"
+	{
+		"en"		"Suicide"
+	}
+	"boomer"
+	{
+		"en"		"Boomer"
+	}
+	"hunter"
+	{
+		"en"		"Hunter"
+	}
+	"smoker"
+	{
+		"en"		"Smoker"
+	}
+	"spitter"
+	{
+		"en"		"Spitter"
+	}
+	"charger"
+	{
+		"en"		"Charger"
+	}
+	"jockey"
+	{
+		"en"		"Jockey"
+	}
+	"tank"
+	{
+		"en"		"Tank"
+	}
+	"witch"
+	{
+		"en"		"Witch"
+	}
+	"mob"
+	{
+		"en"		"MOB"
+	}
+	"director_force_panic_event"
+	{
+		"en"		"Panic Event"
+	}
+
+
+	"SHOP_GUNS"
+	{
+		"en"		"Guns Shop"
+	}
+
+	"SHOP_MELEES"
+	{
+		"en"		"Melee Shop"
+	}
+
+	"SHOP_THROWABLES"
+	{
+		"en"		"Throwables Shop"
+	}
+
+	"SHOP_AMMOS"
+	{
+		"en"		"Ammo Shop"
+	}
+
+	"SHOP_MEDICINES"
+	{
+		"en"		"Medicines Shop"
+	}
+
+	"SHOP_SF"
+	{
+		"en"		"Special Shop"
+	}
+
+	"SHOP_SF_BAG"
+	{
+		"en"		"Special Bag"
+	}
+
+	"BUY_YES"
+	{
+		"en"		"Yes!"
+	}
+
+	"BUY_NO"
+	{
+		"en"		"No..."
+	}
+
+
+	"DEFIBRILLATE_TEAMMATE"
+	{
+		"en"		"Defibrillator used. "
+	}
+
+	"RESCUED"
+	{
+		"en"		"Rescued someone. "
+	}
+
+	"CURRENT_POINTS"
+	{
+		"en"		"Current Points: "
+	}
+
+	"SHOP_MAIN"
+	{
+		"en"		"Welcome to Shop"
+	}
+
+	"ONLY_USED_BY"
+	{
+		"en"		"Only {ORANGE}survivor team {DEFAULT} or {ORANGE}infected team{DEFAULT} is welcome."
+	}
+
+	"ALL_AMMO_COLORS"
+	{
+		"en"		"all ammo colors"
+	}
+
+	"MENU_SUICIDE"
+	{
+		"en"		"Do you want to die?"
+	}
+
+	"SUICIDE"
+	{
+		"en"		" suicided."
+	}
+
+	"SUICIDE_YES"
+	{
+		"en"		"Yes!"
+	}
+	"SUICIDE_NO"
+	{
+		"en"		"No..."
+	}
+
+	"NOT_ALLOW_SUICIDE"
+	{
+		"en"		"{ORANGE}Suicide{DEFAULT} is disabled."
+	}
+
+	"NO_PRIMARY_WEAPON"
+	{
+		"en"		"You don't have a primary weapon... "
+	}
+	"YOU_ARE_DEAD"
+	{
+		"en"		"Your status seems to bad..."
+	}
+	"NO_PERMANENT_ITEM"
+	{
+		"en"		"To use {ORANGE}Special Bag{DEFAULT}, you have to buy at least one {ORANGE}permanent item{GREEN} from {ORANGE}Special Shop{DEFAULT}."
+	}
+
+	"NOTIFY_ALL"
+	{
+		"#format"	"{1:N},{2:s},{3:d}"
+		"en"		"{BLUE}{1}{DEFAULT} bought {ORANGE}{2}{DEFAULT}(Cost: {ORANGE}{3}{DEFAULT})."
+	}
+
+	"SHOP_TRANSFER"
+	{
+		"en"		"Points Transfer"
+	}
+
+	"FAILED_TO_TRANSFER"
+	{
+		"#format"	"{1:N},{2:d},{3:d},{4:d}"
+		"en"		"Failed! Points balance is not enough to transfer. (Transfer: {ORANGE}{2}{DEFAULT}+{ORANGE}{3}{DEFAULT}, Balance: {GREEN}{4}{DEFAULT})."
+	}
+
+	"TRANSFERRED_ALL"
+	{
+		"#format"	"{1:N},{2:d},{3:N},{4:d}"
+		"en"		"{BLUE}{1}{DEFAULT} transferred {GREEN}{2}{DEFAULT} points to {BLUE}{3}{DEFAULT}. (Handling fee: {ORANGE}{4}{DEFAULT})"
+	}
+
+	"TRANSFERRED_TO"
+	{
+		"#format"	"{1:N},{2:d},{3:d}"
+		"en"		"{BLUE}You{DEFAULT} transferred {GREEN}{2}{DEFAULT} points to {BLUE}{1}{DEFAULT}. (Handling fee charged: {ORANGE}{3}{DEFAULT})"
+	}
+
+	"TRANSFERRED"
+	{
+		"#format"	"{1:N},{2:d}"
+		"en"		"{BLUE}{1}{DEFAULT} transferred {GREEN}{2}{DEFAULT} points to {BLUE}you{DEFAULT}."
+	}
+
+	"USER_MISMATCH"
+	{
+		"en"		"User mismatch... Please try again."
+	}
+
+	"YES"
+	{
+		"en"		"Yes"
+	}
+
+	"NO"
+	{
+		"en"		"No"
+	}
+
+	"MENU_TITLE_TRANSFER_POINT"
+	{
+		"#format"	"{1:d}"
+		"en"		"Transfer {1} points to:"
+	}
+
+	"HANDLING_FEE"
+	{
+		"en"		"Handing Fee: "
+	}
+
+	"AFTER_TRANSFERRED_BALANCE"
+	{
+		"en"		"Balance After Transferring: "
+	}
+
+	"KILLED_SURVIVOR"
+	{
+		 "en"		"Killed {ORANGE}Survivor{DEFAULT}! "
+	}
+
+	"INCAPACITATE_SURVIVOR"
+	{
+		 "en"		"Incapacitate a survivor. "
+	}
+
+	"PULLED_SURVIVOR"
+	{
+		 "en"		"Pulled a survivor. "
+	}
+
+	"POUNCED_SURVIVOR"
+	{
+		 "en"		"Pounced a survivor. "
+	}
+
+	"TAGGED_SURVIVOR"
+	{
+		 "en"		"Tagged a survivor. "
+	}
+
+	"CHARGED_SURVIVOR"
+	{
+		 "en"		"Charged a survivor. "
+	}
+
+	"COLLATERAL_DAMAGE"
+	{
+		 "en"		"Collateral damage!!! "
+	}
+
+	"RODE_SURVIVOR"
+	{
+		 "en"		"Rode a survivor!!! "
+	}
+
+	"BATH_DAMAGE"
+	{
+		 "en"		"Bath Damage! "
+	}
+
+	"MULTIPLE_DAMAGE"
+	{
+		 "en"		"Multiple Damage! "
+	}
+
+	"INVALID_ITEM"
+	{
+		"#format"	"{1:s}"
+		"en"		"{ORANGE}{1}{DEFAULT} is an invalid item."
+	}
+
+	"YOU_ARE_ALIVE"
+	{
+		"en"		"To respawn, you need to die first."
+	}
+
+	"HELP"
+	{
+		"en"		"Item points can be earned by performing acts of teamwork. Type !buy to spend them, and !points to find out how many you have."
+	}
+
+	"UP_TO_LIMIT"
+	{
+		"#format"	"{1:s}"
+		"en"		"Failed. The amount of {ORANGE}{1}{DEFAULT} reached the upper limit."
+	}
+
+	"SHOP_AIRSTRIKE"
+	{
+		"en"		"Airstrike Shop"
+	}
+
+	"SUPER_QING_GONG_ACTIVE"
+	{
+		"en"		"Super Qing Gong"
+	}
+
+	"QING_GONG_ACTIVE"
+	{
+		"en"		"Qing Gong"
+	}
+
+	"QING_GONG"
+	{
+		"en"		"Qing Gong Scroll"
+	}
+
+	"WHEN_SF_IS_ON"
+	{
+		"#format"   "{1:s},{2:s}"
+		"en"		"When {ORANGE}{1}{DEFAULT} is {GREEN}on{DEFAULT}, {ORANGE}{2}{DEFAULT} will be {ORANGE}off{DEFAULT} automatically."
+	}
+
+	"AUTO_BHOP_TUT"
+	{
+		"en"		"Pressing {ORANGE}JUMP{DEFAULT} to active {ORANGE}Auto Bunny Hop{DEFAULT}."
+	}
+
+	"QING_GONG_TUT"
+	{
+		"en"		"Pressing {ORANGE}DUCK /+ DOUBLE JUMP{DEFAULT} to active {ORANGE}Qing Gong{DEFAULT}."
+	}
+
+	"NO_GUN_TO_ACTIVE"
+	{
+		"#format"   "{1:s}"
+		"en"		"You don't have any gun, {ORANGE}{1}{DEFAULT} will be active after you pick up a gun."
+	}
+}
