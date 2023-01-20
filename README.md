@@ -7,6 +7,7 @@ I created this repo to share and help people who want to set up servers similar 
 
 **- Plugins in the "optional" or "disabled" folder are disabled automatically. Plugin can only be activated with the command: 
 "sm plugins load optional/pluginnamehere.smx" 
+or
 "sm plugins load disabled/pluginnamehere.smx"**
 
 **- There are a lot of unused configs or text files in "cfg/sourcemod", "addons/sourcemod/data" and "addons/sourcemod/configs" because I tested and used a lot of different plugins in the past and I did not delete them so my settings can be saved, as I may activate a plugin again in the future**
