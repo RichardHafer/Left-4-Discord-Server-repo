@@ -4,7 +4,7 @@ I created this repo to share and help people who want to set up servers similar 
 
 Is outdated by now. Will update soon.
 
-# **DISCLAIMER DON'T IGNORE THIS!** 
+# **WARNING DON'T IGNORE THIS!** 
 **- Many Plugins have been edited to have [Left 4 Discord] prefix in chat, however, I was not able to include most edited files in the "addons/sourcemod/scripting" folder, as they still are on my old Computer or I deleted them entirely**
 
 **- Plugins in the "optional" or "disabled" folder are disabled automatically. Plugin can only be activated with the command: 
