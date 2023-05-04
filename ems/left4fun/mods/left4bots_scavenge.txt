@@ -1,6 +1,0 @@
-scavenge_cluster_bonus_time 45
-scavenge_round_initial_time 120
-scavenge_round_restart_delay 4
-scavenge_round_restart_delay_tied 8
-scavenge_round_setup_time 10
-scavenge_score_bonus_time 45

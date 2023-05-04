@@ -1,6 +1,6 @@
 /*
 *	Left 4 DHooks Direct
-*	Copyright (C) 2022 Silvers
+*	Copyright (C) 2023 Silvers
 *
 *	This program is free software: you can redistribute it and/or modify
 *	it under the terms of the GNU General Public License as published by
@@ -18,7 +18,8 @@
 
 
 
-#define PLUGIN_VERSION		"1.114"
+#define PLUGIN_VERSION		"1.128"
+#define PLUGIN_VERLONG		1128
 
 #define DEBUG				0
 // #define DEBUG			1	// Prints addresses + detour info (only use for debugging, slows server down)
@@ -114,7 +115,7 @@
 
 // ====================================================================================================
 // UPDATER
-#define UPDATE_URL  					  "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/updater.txt"
+#define UPDATE_URL					"https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/updater.txt"
 
 native void Updater_AddPlugin(const char[] url);
 // ====================================================================================================
@@ -211,12 +212,17 @@ ArrayList g_aForwardNames;					// Stores Forward names
 ArrayList g_aUseLastIndex;					// Use last index
 ArrayList g_aForwardIndex;					// Stores Detour indexes
 ArrayList g_aForceDetours;					// Determines if a detour should be forced on without any forward using it
+ArrayList g_aDetourHookIDsPre;				// Hook IDs created by DynamicHook type detours
+ArrayList g_aDetourHookIDsPost;				// Hook IDs created by DynamicHook type detours
 int g_iSmallIndex;							// Index for each detour while created
 int g_iLargeIndex;							// Index for each detour while created
 bool g_bCreatedDetours;						// To determine first time creation of detours, or if enabling or disabling
 float g_fLoadTime;							// When the plugin was loaded, to ignore when "AP_OnPluginUpdate" fires
 Handle g_hThisPlugin;						// Ignore checking this plugin
 GameData g_hGameData;						// GameData file - to speed up loading
+int g_iScriptVMDetourIndex;
+float g_fCvar_Adrenaline, g_fCvar_PillsDecay;
+int g_iCvar_AddonsEclipse, g_iCvar_RescueDeadTime;
 
 
 
@@ -249,6 +255,7 @@ Address g_pVanillaModeAddress;
 int g_iOff_LobbyReservation;
 int g_iOff_VersusStartTimer;
 int g_iOff_m_rescueCheckTimer;
+int g_iOff_m_iszScriptId;
 int g_iOff_SpawnTimer;
 int g_iOff_MobSpawnTimer;
 int g_iOff_VersusMaxCompletionScore;
@@ -266,17 +273,19 @@ int g_iOff_InvulnerabilityTimer;
 int g_iOff_m_iTankTickets;
 int g_iOff_m_iSurvivorHealthBonus;
 int g_iOff_m_bFirstSurvivorLeftStartArea;
-int g_iOff_m_iShovePenalty;
-int g_iOff_m_fNextShoveTime;
+// int g_iOff_m_iShovePenalty;
+// int g_iOff_m_fNextShoveTime;
 int g_iOff_m_preIncapacitatedHealth;
 int g_iOff_m_preIncapacitatedHealthBuffer;
 int g_iOff_m_maxFlames;
 int g_iOff_m_flow;
 int g_iOff_m_PendingMobCount;
+int g_iOff_m_nFirstClassIndex;
 int g_iOff_m_fMapMaxFlowDistance;
 int g_iOff_m_chapter;
 int g_iOff_m_attributeFlags;
 int g_iOff_m_spawnAttributes;
+int g_iOff_NavAreaID;
 // int g_iOff_m_iClrRender; // NULL PTR - METHOD (kept for demonstration)
 // int ClearTeamScore_A;
 // int ClearTeamScore_B;
@@ -287,7 +296,7 @@ int L4D2CountdownTimer_Offsets[9];
 int L4D2IntervalTimer_Offsets[6];
 
 // l4d2weapons.inc
-int L4D2IntWeapon_Offsets[5];
+int L4D2IntWeapon_Offsets[6];
 int L4D2FloatWeapon_Offsets[21];
 int L4D2BoolMeleeWeapon_Offsets[1];
 int L4D2IntMeleeWeapon_Offsets[2];
@@ -302,14 +311,26 @@ int g_pScavengeMode;
 Address g_pServer;
 Address g_pDirector;
 Address g_pGameRules;
+Address g_pTheNavAreas;
+Address g_pTheNavAreas_List;
+Address g_pTheNavAreas_Size;
 Address g_pNavMesh;
 Address g_pZombieManager;
 Address g_pMeleeWeaponInfoStore;
 Address g_pWeaponInfoDatabase;
+Address g_pScriptVM;
+Address g_pCTerrorPlayer_CanBecomeGhost;
+
+
+
+// CanBecomeGhost patch
+ArrayList g_hCanBecomeGhost;
+int g_iCanBecomeGhostOffset;
 
 
 
 // Other
+Address g_pScriptId;
 int g_iAttackTimer;
 int g_iOffsetAmmo;
 int g_iPrimaryAmmoType;
@@ -321,14 +342,34 @@ bool g_bLinuxOS;
 bool g_bLeft4Dead2;
 bool g_bMapStarted;
 bool g_bRoundEnded;
-bool g_bCheckpoint[MAXPLAYERS+1];
+bool g_bCheckpointFirst[MAXPLAYERS+1];
+bool g_bCheckpointLast[MAXPLAYERS+1];
 ConVar g_hCvar_VScriptBuffer;
 ConVar g_hCvar_AddonsEclipse;
 ConVar g_hCvar_RescueDeadTime;
 ConVar g_hCvar_PillsDecay;
-ConVar g_hCvar_PillsHealth;
+ConVar g_hCvar_Adrenaline;
 ConVar g_hCvar_Revives;
 ConVar g_hCvar_MPGameMode;
+DynamicHook g_hScriptHook;
+
+
+
+// Spitter acid projectile damage
+bool g_bAcidWatch;
+int g_iAcidEntity[2048];
+
+char g_sAcidSounds[6][] =
+{
+	"player/PZ/hit/zombie_slice_1.wav",
+	"player/PZ/hit/zombie_slice_2.wav",
+	"player/PZ/hit/zombie_slice_3.wav",
+	"player/PZ/hit/zombie_slice_4.wav",
+	"player/PZ/hit/zombie_slice_5.wav",
+	"player/PZ/hit/zombie_slice_6.wav"
+};
+
+
 
 #if DEBUG
 bool g_bLateLoad;
@@ -397,7 +438,6 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 
 	g_hThisPlugin = myself;
-	RegPluginLibrary("left4dhooks");
 
 
 
@@ -411,7 +451,7 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 	// ====================================================================================================
 	//									DUPLICATE PLUGIN RUNNING
 	// ====================================================================================================
-	if( GetFeatureStatus(FeatureType_Native, "L4D_GetPointer") != FeatureStatus_Unknown )
+	if( GetFeatureStatus(FeatureType_Native, "L4D_BecomeGhost") == FeatureStatus_Available )
 	{
 		strcopy(error, err_max, "\n====================\nPlugin \"Left 4 DHooks\" is already running. Please remove the duplicate plugin.\n====================");
 		return APLRes_SilentFailure;
@@ -434,6 +474,13 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 	//									SETUP FORWARDS AND NATIVES
 	// ====================================================================================================
 	SetupForwardsNatives(); // From: "l4dd/l4dd_setup.sp"
+
+
+
+	// ====================================================================================================
+	//									END SETUP
+	// ====================================================================================================
+	RegPluginLibrary("left4dhooks");
 
 
 
@@ -475,6 +522,8 @@ public void OnPluginStart()
 
 	g_iClassTank = g_bLeft4Dead2 ? 8 : 5;
 
+	g_hCanBecomeGhost = new ArrayList();
+
 	if( g_bLeft4Dead2 )
 		g_iAttackTimer = FindSendPropInfo("CTerrorWeapon", "m_attackTimer");
 	g_iOffsetAmmo = FindSendPropInfo("CTerrorPlayer", "m_iAmmo");
@@ -511,7 +560,7 @@ public void OnPluginStart()
 	// ====================================================================================================
 	//									ANIMMATION HOOK
 	// ====================================================================================================
-	g_hAnimationActivityList = new ArrayList(ByteCountToCells(64));
+	g_hAnimationActivityList = new ArrayList(ByteCountToCells(48));
 	ParseActivityConfig();
 
 	g_iAnimationHookedClients = new ArrayList();
@@ -642,15 +691,25 @@ public void OnPluginStart()
 		g_hCvar_VScriptBuffer = CreateConVar("l4d2_vscript_return", "", "Buffer used to return VScript values. Do not use.", FCVAR_DONTRECORD);
 		g_hCvar_AddonsEclipse = CreateConVar("l4d2_addons_eclipse", "-1", "Addons Manager (-1: use addonconfig; 0: disable addons; 1: enable addons.)", FCVAR_NOTIFY);
 		AutoExecConfig(true, "left4dhooks");
-		g_hCvar_AddonsEclipse.AddChangeHook(ConVarChanged_Cvars);
 
-		g_hCvar_PillsHealth = FindConVar("pain_pills_health_value");
+		g_hCvar_AddonsEclipse.AddChangeHook(ConVarChanged_Addons);
+		g_iCvar_AddonsEclipse = g_hCvar_AddonsEclipse.IntValue;
+
+		g_hCvar_Adrenaline = FindConVar("adrenaline_health_buffer");
+		g_hCvar_Adrenaline.AddChangeHook(ConVarChanged_Cvars);
+		g_fCvar_Adrenaline = g_hCvar_Adrenaline.FloatValue;
 	} else {
 		g_hCvar_Revives = FindConVar("survivor_max_incapacitated_count");
 	}
 
 	g_hCvar_PillsDecay = FindConVar("pain_pills_decay_rate");
+	g_hCvar_PillsDecay.AddChangeHook(ConVarChanged_Cvars);
+	g_fCvar_PillsDecay = g_hCvar_PillsDecay.FloatValue;
+
 	g_hCvar_RescueDeadTime = FindConVar("rescue_min_dead_time");
+	g_hCvar_RescueDeadTime.AddChangeHook(ConVarChanged_Cvars);
+	g_iCvar_RescueDeadTime = g_hCvar_RescueDeadTime.IntValue;
+
 	g_hCvar_MPGameMode = FindConVar("mp_gamemode");
 	g_hCvar_MPGameMode.AddChangeHook(ConVarChanged_Mode);
 
@@ -660,32 +719,80 @@ public void OnPluginStart()
 	//									EVENTS
 	// ====================================================================================================
 	HookEvent("round_start",					Event_RoundStart);
-	HookEvent("player_left_checkpoint",			Event_LeftCheckpoint);
-	HookEvent("player_entered_checkpoint",		Event_EnteredCheckpoint);
+
 	if( !g_bLeft4Dead2 )
-		HookEvent("player_entered_start_area",	Event_EnteredCheckpoint);
-}
-
-void Event_EnteredCheckpoint(Event event, const char[] name, bool dontBroadcast)
-{
-	g_bCheckpoint[GetClientOfUserId(event.GetInt("userid"))] = true;
-}
-
-void Event_LeftCheckpoint(Event event, const char[] name, bool dontBroadcast)
-{
-	g_bCheckpoint[GetClientOfUserId(event.GetInt("userid"))] = false;
+	{
+		HookEvent("round_end",						Event_RoundEnd);
+		HookEvent("player_entered_start_area",		Event_EnteredStartArea);
+		HookEvent("player_left_start_area",			Event_LeftStartArea);
+		HookEvent("player_left_checkpoint",			Event_LeftCheckpoint);
+		HookEvent("player_entered_checkpoint",		Event_EnteredCheckpoint);
+	}
 }
 
 void Event_RoundStart(Event event, const char[] name, bool dontBroadcast)
 {
 	g_bRoundEnded = false;
+}
 
-	for( int i = 1; i <= MaxClients; i++ )
+void Event_RoundEnd(Event event, const char[] name, bool dontBroadcast)
+{
+	// Reset checkpoints
+	if( !g_bLeft4Dead2 )
 	{
-		if( IsClientInGame(i) && GetClientTeam(i) == 2 )
-			g_bCheckpoint[i] = true;
-		else
-			g_bCheckpoint[i] = false;
+		for( int i = 1; i <= MaxClients; i++ )
+		{
+			g_bCheckpointFirst[i] = false;
+			g_bCheckpointLast[i] = false;
+		}
+	}
+}
+
+void Event_EnteredStartArea(Event event, const char[] name, bool dontBroadcast)
+{
+	int client = GetClientOfUserId(event.GetInt("userid"));
+	g_bCheckpointFirst[client] = true;
+}
+
+void Event_LeftStartArea(Event event, const char[] name, bool dontBroadcast)
+{
+	int client = GetClientOfUserId(event.GetInt("userid"));
+	g_bCheckpointFirst[client] = false;
+}
+
+void Event_EnteredCheckpoint(Event event, const char[] name, bool dontBroadcast)
+{
+	int client = event.GetInt("userid");
+	if( client )
+	{
+		client = GetClientOfUserId(client);
+		if( client )
+		{
+			int door = event.GetInt("door");
+
+			if( door == GetCheckpointFirst() )
+			{
+				g_bCheckpointFirst[client] = true;
+			}
+			else if( door == GetCheckpointLast() )
+			{
+				g_bCheckpointLast[client] = true;
+			}
+		}
+	}
+}
+
+void Event_LeftCheckpoint(Event event, const char[] name, bool dontBroadcast)
+{
+	int client = event.GetInt("userid");
+	if( client )
+	{
+		client = GetClientOfUserId(client);
+		if( client )
+		{
+			g_bCheckpointFirst[client] = false;
+			g_bCheckpointLast[client] = false;
+		}
 	}
 }
 
@@ -696,8 +803,16 @@ void Event_RoundStart(Event event, const char[] name, bool dontBroadcast)
 // ====================================================================================================
 public void OnPluginEnd()
 {
+	// Unpatch AddonsDisabler
 	if( g_bLeft4Dead2 )
 		AddonsDisabler_Unpatch();
+
+	// Unpatch CanBecomeGhost
+	int count = g_hCanBecomeGhost.Length;
+	for( int i = 0; i < count; i++ )
+	{
+		StoreToAddress(g_pCTerrorPlayer_CanBecomeGhost + view_as<Address>(g_iCanBecomeGhostOffset + i), g_hCanBecomeGhost.Get(i), NumberType_Int8, true);
+	}
 
 	// Target Filters
 	UnloadTargetFilters();
@@ -810,6 +925,16 @@ public void OnMapEnd()
 	g_bMapStarted = false;
 	g_iMaxChapters = 0;
 
+	// Reset checkpoints
+	if( !g_bLeft4Dead2 )
+	{
+		for( int i = 1; i <= MaxClients; i++ )
+		{
+			g_bCheckpointFirst[i] = false;
+			g_bCheckpointLast[i] = false;
+		}
+	}
+
 	// Reset hooks
 	g_iAnimationHookedClients.Clear();
 	g_iAnimationHookedPlugins.Clear();
@@ -835,6 +960,9 @@ public void OnMapEnd()
 
 public void OnClientDisconnect(int client)
 {
+	g_bCheckpointFirst[client] = false;
+	g_bCheckpointLast[client] = false;
+
 	// Remove client from hooked list
 	int index = g_iAnimationHookedClients.FindValue(client);
 	if( index != -1 )
@@ -1090,14 +1218,26 @@ void ColorConfig_End(SMCParser parser, bool halted, bool failed)
 public void OnConfigsExecuted()
 {
 	if( g_bLeft4Dead2 )
-		ConVarChanged_Cvars(null, "", "");
+		ConVarChanged_Addons(null, "", "");
+
+	ConVarChanged_Cvars(null, "", "");
 }
 
 bool g_bAddonsPatched;
 
 void ConVarChanged_Cvars(Handle convar, const char[] oldValue, const char[] newValue)
 {
-	if( g_hCvar_AddonsEclipse.IntValue > -1 )
+	if( g_bLeft4Dead2 )
+		g_fCvar_Adrenaline = g_hCvar_Adrenaline.FloatValue;
+	g_fCvar_PillsDecay = g_hCvar_PillsDecay.FloatValue;
+	g_iCvar_RescueDeadTime = g_hCvar_RescueDeadTime.IntValue;
+}
+
+void ConVarChanged_Addons(Handle convar, const char[] oldValue, const char[] newValue)
+{
+	g_iCvar_AddonsEclipse = g_hCvar_AddonsEclipse.IntValue;
+
+	if( g_iCvar_AddonsEclipse > -1 )
 		AddonsDisabler_Patch();
 	else
 		AddonsDisabler_Unpatch();
@@ -1145,7 +1285,7 @@ MRESReturn DTR_AddonsDisabler(int pThis, Handle hReturn, DHookParam hParams) // 
 	PrintToServer("##### DTR_AddonsDisabler");
 	#endif
 
-	int cvar = g_hCvar_AddonsEclipse.IntValue;
+	int cvar = g_iCvar_AddonsEclipse;
 	if( cvar != -1 )
 	{
 		int ptr = hParams.Get(1);
@@ -1251,6 +1391,16 @@ public void OnMapStart()
 
 
 
+	// Load detours, first load from plugin start
+	if( !g_bCreatedDetours )
+	{
+		g_pScriptId = view_as<Address>(FindDataMapInfo(0, "m_iszScriptId") - 16);
+
+		SetupDetours(g_hGameData);
+	}
+
+
+
 	// Benchmark
 	#if DEBUG
 	g_vProf = new Profiler();
@@ -1281,17 +1431,25 @@ public void OnMapStart()
 
 		GetGameMode(); // Get current game mode
 
+
+
 		// Precache Models, prevent crashing when spawning with SpawnSpecial()
 		for( int i = 0; i < sizeof(g_sModels1); i++ )
 			PrecacheModel(g_sModels1[i]);
+
+		PrecacheModel(SPRITE_GLOW, true); // Dissolver
 
 		if( g_bLeft4Dead2 )
 		{
 			for( int i = 0; i < sizeof(g_sModels2); i++ )
 				PrecacheModel(g_sModels2[i]);
-		}
 
-		PrecacheModel(SPRITE_GLOW, true); // Dissolver
+			for( int i = 0; i < sizeof(g_sAcidSounds); i++ )
+				PrecacheSound(g_sAcidSounds[i]);
+
+			for( int i = 0; i < 2048; i++ )
+				g_iAcidEntity[i] = 0;
+		}
 
 
 
@@ -1340,6 +1498,8 @@ public void OnMapStart()
 			SDKCall(g_hSDK_CDirector_GetScriptValueInt, g_pDirector, "TotalJockey",			1);
 			SDKCall(g_hSDK_CDirector_GetScriptValueInt, g_pDirector, "TotalCharger",		1);
 		}
+
+
 
 		// Melee weapon IDs - They can change when switching map depending on what melee weapons are enabled
 		if( g_bLeft4Dead2 )
@@ -1391,7 +1551,7 @@ float GetTempHealth(int client)
 	float fGameTime = GetGameTime();
 	float fHealthTime = GetEntPropFloat(client, Prop_Send, "m_healthBufferTime");
 	float fHealth = GetEntPropFloat(client, Prop_Send, "m_healthBuffer");
-	fHealth -= (fGameTime - fHealthTime) * g_hCvar_PillsDecay.FloatValue;
+	fHealth -= (fGameTime - fHealthTime) * g_fCvar_PillsDecay;
 	return fHealth < 0.0 ? 0.0 : fHealth;
 }
 

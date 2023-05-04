@@ -1,0 +1,10 @@
+L 02/19/2023 - 17:04:50: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: (MN) Ino | STEAMID: STEAM_1:0:529472328 | mat_monitorgamma_tv_enabled: 1]:.
+L 02/19/2023 - 17:04:50: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: (MN) Ino | STEAMID: STEAM_1:0:529472328 | mat_monitorgamma_tv_enabled: 1]:.
+L 02/19/2023 - 17:05:25: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: (MN) Ino | STEAMID: STEAM_1:0:529472328 | mat_monitorgamma_tv_enabled: 1]:.
+L 02/19/2023 - 17:06:02: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: (MN) Ino | STEAMID: STEAM_1:0:529472328 | mat_monitorgamma_tv_enabled: 1]:.
+L 02/19/2023 - 17:06:02: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: (MN) Ino | STEAMID: STEAM_1:0:529472328 | mat_monitorgamma_tv_enabled: 1]:.
+L 02/19/2023 - 22:59:25: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: RichardHafer | STEAMID: STEAM_1:1:86697849 | mat_monitorgamma_tv_enabled: 1]:.
+L 02/25/2023 - 22:31:13: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: Freddy | STEAMID: STEAM_1:0:55955447 | spec_allowroaming: 1]:.
+L 02/25/2023 - 22:35:22: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: Freddy | STEAMID: STEAM_1:0:55955447 | spec_allowroaming: 1]:.
+L 02/25/2023 - 22:38:39: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: Freddy | STEAMID: STEAM_1:0:55955447 | c_thirdpersonshoulder: 1]:.
+L 02/25/2023 - 22:49:14: [anticheat/[L4D]AntiCvarCheat.smx] .:[Name: Freddy | STEAMID: STEAM_1:0:55955447 | c_thirdpersonshoulder: 1]:.

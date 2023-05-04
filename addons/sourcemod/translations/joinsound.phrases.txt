@@ -1,0 +1,18 @@
+"Phrases"
+{
+	"JoinStop"
+	{
+		"#format"	"{1:s}"
+		"en"		"{green}[JoinSound] {lightgreen}Use {green}!{1} {lightgreen}to stop playing the joinsound."
+		"de"		"{green}[JoinSound] {lightgreen}Mit {green}!{1} {lightgreen}kannst Du den Join-Sound stoppen."
+		"pl"		"{green}[JoinSound] {lightgreen}Wpisz{green}!{1} {lightgreen}abywylaczyc joinsound."
+	}
+
+	"AdminJoin"
+	{
+		"#format"	"{1:N}"
+		"en"		"{green}[Admin] {orange}{1} {lightgreen}joined the game!
+		"de"		"{green}[Admin] {orange}{1} {lightgreen}betritt das Spiel!
+		"pl"		"{green}[Admin] {orange}{1} {lightgreen}dolaczyl do gry!
+	}
+}

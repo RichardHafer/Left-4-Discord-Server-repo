@@ -23,10 +23,14 @@
     }
     "2"
     {
-        "chat"			"{green}[Left 4 Discord] {lightgreen}Some commands:\n!hat - Equip hats\n!chmap - Vote map change\n!votemode - Vote mode change\n!csm - Switch chars (gets saved!)"
+        "chat"			"{green}[Left 4 Discord] {yellow}Some commands:\n{yellow}!hat {lightgreen}- {default}Equip hats\n{yellow}!chmap {lightgreen}- {default}Vote map change\n{yellow}!votemode {lightgreen}- {default}Vote mode change\n{yellow}!csm {lightgreen}- {default}Switch chars (gets saved!)"
     }
     "3"
     {
-        "chat"			"{green}[Left 4 Discord] {lightgreen}Some commands:\n!hat - Equip hats\n!chmap - Vote map change\n!votemode - Vote mode change\n!csm - Switch chars (gets saved!)"
+        "chat"			"{green}[Left 4 Discord] {yellow}This server runs SourceBans++ \n{lightgreen} → left4discord.com/sourcebans---"
+    }
+    "4"
+    {
+        "chat"			"{green}[Left 4 Discord] {yellow}Our Website: \n{lightgreen} → left4discord.com"
     }
 }
