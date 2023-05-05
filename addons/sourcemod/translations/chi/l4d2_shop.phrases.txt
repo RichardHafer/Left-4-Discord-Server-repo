@@ -1,0 +1,647 @@
+"Phrases"
+{
+
+	"SYSTEM"
+	{
+		"chi"		"{ORANGE}[{GREEN}商城{ORANGE}]{DEFAULT} "
+	}
+
+	"ADVERTISEMENT"
+	{
+		"chi"		"{DEFAULT}说 {CYAN}!buy {DEFAULT}开启{CYAN}商城"
+	}
+
+
+	"NOT_ENOUGH_POINTS"
+	{
+		"#format"  "{1:d},{2:d}"
+		"chi"		"您没有足够的点数。 (需要:{ORANGE}{1}{DEFAULT}，您有:{ORANGE}{2}{DEFAULT})"
+	}
+
+	"FAILED_TO_BUY"
+	{
+		"#format"  "{1:s}"
+		"chi"		"购买{ORANGE}{1}{DEFAULT}失败!"
+	}
+
+	"REWARD_POINTS"
+	{
+		"#format"  "{1:d}"
+		"chi" 		"{DEFAULT}奖励: {GREEN}{1}{DEFAULT}点数。 "
+	}
+
+	"KILLED_INFECTED"
+	{
+		"#format"  "{1:d}"
+		"chi"		"击杀了{ORANGE}{1}名{DEFAULT}感染者! "
+	}
+
+	"KILLED_SPECIAL_INFECTED"
+	{
+		"chi"		"击杀了{ORANGE}特殊感染者{DEFAULT}! "
+	}
+
+	"REVIVED_TEAMMATE"
+	{
+		"chi"		"救起了倒地队友。 "
+	}
+
+	"REVIVED_TEAMMATE_LEDGE"
+	{
+		"chi"		"救起了在悬崖边缘的队友。 "
+	}
+
+	"PROTECTED_TEAMMATE"
+	{
+		"chi"		"保护了队友。 "
+	}
+
+	"HEALED_TEAMMATE"
+	{
+		"chi"		"包扎了队友。 "
+	}
+
+	"BURNED_TANK"
+	{
+		"chi"		"燃烧了{ORANGE}Tank{DEFAULT}! "
+	}
+
+	"KILLED_WITCH"
+	{
+		"chi"		"击杀了{ORANGE}Witch{DEFAULT}! "
+	}
+
+	"KILLED_WITCH_ONE_SHOT"
+	{
+		"chi"		"一枪击杀了{ORANGE}Witch{DEFAULT}! "
+	}
+
+	"KILLED_TANK"
+	{
+		"chi"		"幸存者战胜了{ORANGE}Tank{DEFAULT}! 全体"
+	}
+
+	"MENU_POINTS"
+	{
+		"#format"  "{1:d}"
+		"chi"		"您的点数: {1}"
+	}
+
+	"SHOP_INFECTED"
+	{
+		"chi"		"感染者商店"
+	}
+
+	"SHOP_SMGS"
+	{
+		"chi"		"冲锋枪商店"
+	}
+
+	"SHOP_RIFLES"
+	{
+		"chi"		"步枪商店"
+	}
+
+	"SHOP_SNIPERS"
+	{
+		"chi"		"狙击枪商店"
+	}
+
+	"SHOP_SHOTGUNS"
+	{
+		"chi"		"散弹枪商店"
+	}
+
+	"SHOP_OTHERS"
+	{
+		"chi"		"其他枪械商店"
+	}
+
+	"SHOP_SF_TRIAL"
+	{
+		"chi"		"体验商城"
+	}
+
+	"SHOP_SF_PERMANENT"
+	{
+		"chi"		"永久商城"
+	}
+
+	"AUTO_BHOP"
+	{
+		"chi"		"自动连跳"
+	}
+
+	"GRAY_AMMO"
+	{
+		"chi"		"灰色弹道"
+	}
+
+	"GREEN_AMMO"
+	{
+		"chi"		"绿色弹道"
+	}
+
+	"BLUE_AMMO"
+	{
+		"chi"		"蓝色弹道"
+	}
+
+	"GOLD_AMMO"
+	{
+		"chi"		"金色弹道"
+	}
+
+	"RED_AMMO"
+	{
+		"chi"		"红色弹道"
+	}
+
+	"PERMANENT"
+	{
+		"chi"		"(永久)"
+	}
+
+	"ONE_ROUND"
+	{
+		"chi"		"(一回合)"
+	}
+
+	"REFUNDED"
+	{
+		"#format"  "{1:d}"
+		"chi"		"退还{GREEN}{1}{DEFAULT}点数。"
+	}
+
+	"IS_IN_YOUR_BAG"
+	{
+		"#format"  "{1:s}"
+		"chi"		"您已拥有{ORANGE}{1}{DEFAULT}。"
+	}
+
+	"MENU_BUY_CONFIRM"
+	{
+		"#format"  "{1:s},{2:d},{3:d},{4:d}"
+		"chi"		"产品: {1}\n费用: {2}\n您的点数: {3}\n购后结余: {4}\n "
+	}
+
+	"SUCCEED_TO_BUY"
+	{
+		"#format"  "{1:s},{2:d},{3:d}"
+		"chi"		"购买{ORANGE}{1}{GREEN}成功! 消费了 {ORANGE}{2}{DEFAULT} 点数, 点数结余: {GREEN}{3}{DEFAULT}。"
+	}
+
+	"SUCCEED_TO_LOAD"
+	{
+		"#format"  "{1:s},{2:d}"
+		"chi"	   "已读取存档! ID:{ORANGE}{1}%{DEFAULT}, 点数: {GREEN}{2}{DEFAULT}。"
+	}
+
+	"ENABLED"
+	{
+		"chi"	   "已启用"
+	}
+
+	"DISABLED"
+	{
+		"chi"	   "已停用"
+	}
+
+	"ADMIN_ADD_POINT"
+	{
+		"#format"  "{1:d}"
+		"chi" 		"{ORANGE}Admin{DEFAULT}给您发了奖励: {GREEN}{1}{DEFAULT}点数。 "
+	}
+
+	"ADMIN_CONFISCATE_POINT"
+	{
+		"#format"  "{1:d}"
+		"chi" 		"{ORANGE}Admin{DEFAULT}向您没收了{ORANGE}{1}{DEFAULT}点数。 "
+	}
+	"ADMIN_SET_POINT"
+	{
+		"#format"  "{1:d}"
+		"chi" 		"{ORANGE}Admin{DEFAULT}把您的点数设置为{ORANGE}{1}{DEFAULT}点数。 "
+	}
+
+	"MENU_TITLE_ADD_LIST"
+	{
+		"#format"  "{1:d}"
+		"chi" 		"奖励玩家:{1}点数"
+	}
+
+	"MENU_TITLE_CONFISCATE_LIST"
+	{
+		"#format"  "{1:d}"
+		"chi" 		"没收玩家:{1}点数"
+	}
+
+	"MENU_TITLE_SET_LIST"
+	{
+		"#format"  "{1:d}"
+		"chi" 		"设置玩家:{1}点数"
+	}
+
+	"MENU_TITLE_POINTS_LIST"
+	{
+		"chi" 		"选择点数:"
+	}
+
+	"MENU_ADD_POINTS"
+	{
+		"chi" 		"奖励点数"
+	}
+
+	"MENU_REDUCE_POINTS"
+	{
+		"chi" 		"没收点数"
+	}
+
+	"MENU_SET_POINTS"
+	{
+		"chi" 		"设置点数"
+	}
+
+	"MENU_ADMIN_OPTION"
+	{
+		"chi" 		"商城指令"
+	}
+
+	"INVOICE"
+	{
+		"chi"		"{ORANGE}收据{DEFAULT}"
+	}
+
+	"INVOICE_BUY_ITEM"
+	{
+		"chi"		"购买物品:"
+	}
+
+	"INVOICE_PRICE"
+	{
+		"#format"  "{1:d}"
+		"chi"		"售价:{ORANGE}{1}{DEFAULT}"
+	}
+	"INVOICE_BUYER_INFO"
+	{
+		"#format"  "{1:N},{2:d}"
+		"chi"		"顾客:{BLUE}{1}{DEFAULT}, 点数结余:{GREEN}{2}{DEFAULT}"
+	}
+	"INVOICE_THANKS"
+	{
+		"chi"		"{GREEN}非谢感谢您的光顾{DEFAULT}! {GREEN}祝您游戏愉快{DEFAULT}!"
+	}
+	"INVOICE_END"
+	{
+		"chi"		"==============================="
+	}
+	"ammo"
+	{
+		"chi"		"补充弹药"
+	}
+	"health"
+	{
+		"chi"		"满血"
+	}
+	
+
+	"kill"
+	{
+		"chi"		"自杀"
+	}
+	"boomer"
+	{
+		"chi"		"Boomer"
+	}
+	"hunter"
+	{
+		"chi"		"Hunter"
+	}
+	"smoker"
+	{
+		"chi"		"Smoker"
+	}
+	"spitter"
+	{
+		"chi"		"Spitter"
+	}
+	"charger"
+	{
+		"chi"		"Charger"
+	}
+	"jockey"
+	{
+		"chi"		"Jockey"
+	}
+	"tank"
+	{
+		"chi"		"Tank"
+	}
+	"witch"
+	{
+		"chi"		"Witch"
+	}
+	"mob"
+	{
+		"chi"		"MOB"
+	}
+	"director_force_panic_event"
+	{
+		"chi"		"Panic Event"
+	}
+
+
+	"SHOP_GUNS"
+	{
+		"chi"		"枪械商城"
+	}
+
+	"SHOP_MELEES"
+	{
+		"chi"		"锐器商城"
+	}
+
+	"SHOP_THROWABLES"
+	{
+		"chi"		"投掷物商城"
+	}
+
+	"SHOP_AMMOS"
+	{
+		"chi"		"弹药商城"
+	}
+
+	"SHOP_MEDICINES"
+	{
+		"chi"		"医疗商城"
+	}
+
+	"SHOP_SF"
+	{
+		"chi"		"特殊商城"
+	}
+
+	"SHOP_SF_BAG"
+	{
+		"chi"		"特殊背包"
+	}
+
+	"BUY_YES"
+	{
+		"chi"		"买了!"
+	}
+
+	"BUY_NO"
+	{
+		"chi"		"不了..."
+	}
+
+
+	"DEFIBRILLATE_TEAMMATE"
+	{
+		"chi"		"把队友从地狱中拉回。 "
+	}
+
+	"RESCUED"
+	{
+		"chi"		"解救了队友。 "
+	}
+
+	"CURRENT_POINTS"
+	{
+		"chi"		"点数结余:"
+	}
+
+	"SHOP_MAIN"
+	{
+		"chi"		"欢迎光临商城"
+	}
+
+	"ONLY_USED_BY"
+	{
+		"chi"		"只有{ORANGE}幸存者队伍{DEFAULT}或{ORANGE}感染者队伍{DEFAULT}才能使用。"
+	}
+
+	"ALL_AMMO_COLORS"
+	{
+		"chi"		"所有弹道"
+	}
+
+	"MENU_SUICIDE"
+	{
+		"chi"		"你、想死一遍看看吗?"
+	}
+
+	"SUICIDE"
+	{
+		"chi"		"居然被豆腐撞头给砸死了。"
+	}
+
+	"SUICIDE_YES"
+	{
+		"chi"		"要!"
+	}
+	"SUICIDE_NO"
+	{
+		"chi"		"我还不想死..."
+	}
+
+	"NOT_ALLOW_SUICIDE"
+	{
+		"chi"		"{ORANGE}自杀{DEFAULT}已停用。"
+	}
+
+	"NO_PRIMARY_WEAPON"
+	{
+		"chi"		"您没有主武器... "
+	}
+	"YOU_ARE_DEAD"
+	{
+		"chi"		"您目前的状况不太好..."
+	}
+	"NO_PERMANENT_ITEM"
+	{
+		"chi"		"在使用{ORANGE}特殊背包{DEFAULT}前，请先到{ORANGE}特殊商城{DEFAULT}最少购买一个{ORANGE}永久物品{DEFAULT}。"
+	}
+
+	"NOTIFY_ALL"
+	{
+		"#format"	"{1:N},{2:s},{3:d}"
+		"chi"		"{BLUE}{1}{DEFAULT}购买了{ORANGE}{2}{DEFAULT}(售价: {ORANGE}{3}{DEFAULT})。"
+	}
+
+	"SHOP_TRANSFER"
+	{
+		"chi"		"点数转账"
+	}
+
+	"FAILED_TO_TRANSFER"
+	{
+		"#format"	"{1:N},{2:d},{3:N},{4:d}"
+		"chi"		"失败! 点数余额不足以转账(转账: {ORANGE}{2}{DEFAULT}+{ORANGE}{3}{DEFAULT}, 余额: {GREEN}{4}{DEFAULT})。"
+	}
+
+	"TRANSFERRED_ALL"
+	{
+		"#format"	"{1:N},{2:d},{3:N},{4:N}"
+		"chi"		"{BLUE}{1}{DEFAULT}已转账{GREEN}{2}{DEFAULT}点数至{BLUE}{3}{DEFAULT}。(手续费: {ORANGE}{4}{DEFAULT})"
+	}
+
+	"TRANSFERRED_TO"
+	{
+		"#format"	"{1:N},{2:d},{3:d}"
+		"chi"		"{BLUE}您{DEFAULT}已转账{GREEN}{2}{DEFAULT}点数至{BLUE}{1}{DEFAULT}。(已收取手续费: {ORANGE}{3}{DEFAULT})"
+	}
+
+	"TRANSFERRED"
+	{
+		"#format"	"{1:N},{2:d}"
+		"chi"		"{BLUE}{1}{DEFAULT}已转账{GREEN}{2}{DEFAULT}点数至{BLUE}您{DEFAULT}。"
+	}
+
+	"USER_MISMATCH"
+	{
+		"chi"		"用户不正确，请再试一次。"
+	}
+
+	"YES"
+	{
+		"chi"		"好"
+	}
+
+	"NO"
+	{
+		"chi"		"不了"
+	}
+
+	"MENU_TITLE_TRANSFER_POINT"
+	{
+		"#format"	"{1:d}"
+		"chi"		"转账{1}点数至:"
+	}
+	
+	"HANDLING_FEE"
+	{
+		"chi"		"手续费:"
+	}
+
+	"AFTER_TRANSFERRED_BALANCE"
+	{
+		"chi"		"转账后结余:"
+	}
+
+	"KILLED_SURVIVOR"
+	{
+		"chi"		"击杀了{ORANGE}幸存者{DEFAULT}! "
+	}
+
+	"INCAPACITATE_SURVIVOR"
+	{
+		"chi"		"Incapacitate a survivor. "
+	}
+
+	"PULLED_SURVIVOR"
+	{
+		"chi"		"Pulled a survivor. "
+	}
+
+	"POUNCED_SURVIVOR"
+	{
+		"chi"		"Pounced a survivor. "
+	}
+
+	"TAGGED_SURVIVOR"
+	{
+		"chi"		"Tagged a survivor. "
+	}
+
+	"CHARGED_SURVIVOR"
+	{
+		"chi"		"Charged a survivor. "
+	}
+
+	"COLLATERAL_DAMAGE"
+	{
+		"chi"		"Collateral damage!!! "
+	}
+
+	"RODE_SURVIVOR"
+	{
+		"chi"		"Rode a survivor!!! "
+	}
+
+	"BATH_DAMAGE"
+	{
+		"chi"		"Bath Damage! "
+	}
+
+	"MULTIPLE_DAMAGE"
+	{
+		"chi"		"Multiple Damage! "
+	}
+
+	"INVALID_ITEM"
+	{
+		"#format"	"{1:s}"
+		"chi"		"无效的物品 {ORANGE}{1}{DEFAULT}"
+	}
+
+	"YOU_ARE_ALIVE"
+	{
+		"chi"		"只能死亡时购买。"
+	}
+
+	"HELP"
+	{
+		"chi"		"Item points can be earned by performing acts of teamwork. Type !buy to spend them, and !points to find out how many you have."
+	}
+
+	"UP_TO_LIMIT"
+	{
+		"#format"	"{1:s}"
+		"chi"		"失败... {ORANGE}{1}{DEFAULT}的数量已达到上限。"
+	}
+
+
+	"SHOP_AIRSTRIKE"
+	{
+		"chi"		"空袭商城"
+	}
+
+	"SUPER_QING_GONG_ACTIVE"
+	{
+		"chi"		"超级轻功发动"
+	}
+
+	"QING_GONG_ACTIVE"
+	{
+		"chi"		"轻功发动"
+	}
+
+	"QING_GONG"
+	{
+		"chi"		"轻功秘笈"
+	}
+
+	"WHEN_SF_IS_ON"
+	{
+		"#format"   "{1:s},{2:s}"
+		"chi"		"当{ORANGE}{1}{DEFAULT}为{GREEN}启用{DEFAULT}时，{ORANGE}{2}{DEFAULT}将自动{ORANGE}停用{DEFAULT}。"
+	}
+
+	"AUTO_BHOP_TUT"
+	{
+		"chi"		"按住{ORANGE}跳键{DEFAULT}来激活 {ORANGE}自动连跳{DEFAULT}。"
+	}
+
+	"QING_GONG_TUT"
+	{
+		"chi"		"按下{ORANGE}蹲键 /+ 两次跳键{DEFAULT}来激活 {ORANGE}轻功{DEFAULT}。"
+	}
+
+	"NO_GUN_TO_ACTIVE"
+	{
+		"#format"   "{1:s}"
+		"chi"		"您没有任何枪械，待您捡起枪械时，{ORANGE}{1}{DEFAULT}将会激活。" 
+	}
+}

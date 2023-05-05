@@ -1,0 +1,43 @@
+"Phrases"
+{
+	"VoteMode_Force"
+	{
+		"hu"	"Játék mód kényszerítése:"
+	}
+	"VoteMode_Vote"
+	{
+		"hu"	"Játék mód szavazás:"
+	}
+	"VoteMode_Pass"
+	{
+		"hu"	"Egy admin átengedte a jelenlegi szavazást."
+	}
+	"VoteMode_Veto"
+	{
+		"hu"	"Egy admin lezárta a jelenlegi szavazást."
+	}
+	"VoteMode_InProgress"
+	{
+		"hu"	"Nem indítható szavazás, már fut egy!"
+	}
+	"VoteMode_Started"
+	{
+		"hu"	"Elindított egy szavazást a játék mód átváltására:"
+	}
+	"VoteMode_Change"
+	{
+		"hu"	"Átváltsuk a játék módot:"
+	}
+	"VoteMode_Voted"
+	{
+		"hu"	"lett megszavazva a mód váltásnál."
+	}
+	"VoteMode_Changing"
+	{
+		"hu"	"Átváltás"
+	}
+	"VoteMode_Restarting"
+	{
+		"hu"	"A pálya újraindul 3mp múlva..."
+	}
+}

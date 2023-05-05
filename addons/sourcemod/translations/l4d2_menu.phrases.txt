@@ -1,0 +1,72 @@
+"Phrases"
+{
+	"sm_ivote"
+	{
+		"en"			"Vote Menu"		
+		"zho"			"投票選單"
+		"chi"			"投票菜单"
+	}
+
+	"sm_buy ammo"
+	{
+		"en"			"Buy Ammo"		
+		"zho"			"快速買彈"
+		"chi"			"快速买弹"
+	}
+
+	"sm_buy"
+	{
+		"en"			"Shop"		
+		"zho"			"商城"
+		"chi"			"商城"
+	}
+
+	"sm_srs"
+	{
+		"en"			"My SRS"		
+		"zho"			"我的SRS"
+		"chi"			"我的SRS"
+	}
+
+	"sm_hat"
+	{
+		"en"			"Hat"		
+		"zho"			"帽子"
+		"chi"			"帽子"
+	}
+
+	"sm_top10"
+	{
+		"en"			"Top 10 Players"		
+		"zho"			"前十玩家"
+		"chi"			"前十玩家"
+	}
+
+	"sm_lightmenu"
+	{
+		"en"            "Light menu"
+		"zho"           "光效選單"
+		"chi"           "光效菜单"
+	}
+
+	"sm_eff"
+	{
+		"en"            "Enable/Disable Combo Effect"
+		"zho"           "開/關連擊特效"
+		"chi"           "开/关连击特效"
+	}
+
+	"sm_sound"
+	{
+		"en"            "Enable/Disable Combo Sound"
+		"zho"           "開/關連擊音效"
+		"chi"           "开/关连击音效"
+	}
+
+	"MENU"
+	{
+		"en"			"Menu"		
+		"zho"			"選單"
+		"chi"			"菜单"
+	}
+}

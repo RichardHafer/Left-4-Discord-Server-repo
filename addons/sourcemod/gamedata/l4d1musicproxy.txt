@@ -1,0 +1,40 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Functions"
+		{
+			"Music::IsL4D1"
+			{
+				"signature"  "Music::IsL4D1"
+				"callconv"  "thiscall"
+				"return"  "bool"
+				"this"  "ignore"
+			}
+			"CTerrorGameRules::GetSurvivorSet"
+			{
+				"signature"  "CTerrorGameRules::GetSurvivorSet"
+				"callconv"  "thiscall"
+				"return"  "int"
+				"this"  "ignore"
+			}
+		}
+		"Signatures"
+		{
+			"Music::IsL4D1"
+			{
+				"library"		"server"
+				"linux"			"@_ZN5Music6IsL4D1Ev"
+				"windows"		"\xE8\x2A\x2A\x2A\x2A\x83\xF8\x01\x0F\x94\xC0\xC3"
+								/* E8 ? ? ? ? 83 F8 01 0F 94 C0 C3 */
+			}
+			"CTerrorGameRules::GetSurvivorSet"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules14GetSurvivorSetEv"
+				"windows" 	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x01\x8B\x50\x2A\x53\x56\xBB"
+							/* ? ? ? ? ? ? ? ? ? ? 8B 01 8B 50 ? 53 56 BB */
+			}
+		}
+	}
+}
