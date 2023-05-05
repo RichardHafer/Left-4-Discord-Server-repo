@@ -1,7 +1,0 @@
-"Phrases"
-{
-	"Crawl"
-	{
-		"fr"		"Appuyez sur AVANCER pour ramper lorsque vous êtes à terre!"
-	}
-}

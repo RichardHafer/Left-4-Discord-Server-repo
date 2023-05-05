@@ -1,7 +1,0 @@
-"Phrases"
-{
-	"Crawl"
-	{
-		"pt"		"Pressionar tecla em frente para rastejar, enquanto incapacitado"
-	}
-}

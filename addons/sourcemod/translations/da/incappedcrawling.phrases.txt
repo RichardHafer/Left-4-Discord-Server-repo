@@ -1,7 +1,0 @@
-"Phrases"
-{
-	"Crawl"
-	{
-		"da"		"Tryk på fremgangstasten for at kravle, mens du er handlingslammet"
-	}
-}
